@@ -1,2 +1,10 @@
-# CS374_Hospitus
-2019 Spring Human Computer Interaction Project
+# CS374 Hospitus PR1 Report
+
+Experience
+
+Interviews
+
+Needs
+
+Insights
+
