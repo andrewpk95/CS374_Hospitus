@@ -52,7 +52,7 @@ PS:
 ## 4. Solution Ideas
 
 ### 1. HMW provide information about the accommodation quality of a hospital?
-- Create accomodation reviews section
+- **Create accomodation reviews section**
 - Rate the hospitals in different categories and make them easily accessible
 - Frequently update information
 - Ask those who have been to the hospital
@@ -61,7 +61,7 @@ PS:
 - Provide list of treatments hospital provides
 - Provide food menu
 - Provide pricing of the different rooms
-- Provide information about nearby welfares (such as restaurants, convenience stores…)
+- **Provide information about nearby welfares (such as restaurants, convenience stores…)**
 - Provide QnA session (like Yahoo Answers)
 ### HMW make sure the hospital is available?
 - Contact the staff of the hospital.
@@ -79,7 +79,7 @@ PS:
 - Show the best way to go to hospital and expecting time needed
 - Show the list of hospitals which are available
 - Rank (or sort) the search result based on distance  or other standards
-- Provide summarized information in a thumbnail or profiles of hospitals
+- **Provide summarized information in a thumbnail or profiles of hospitals**
 - Ask those around the user
 - Call an ambulance
 - Take a taxi and tell the driver to get to the nearest hospital
@@ -88,6 +88,19 @@ PS:
 
 
 ## 5. Storyboards
+
+### Create accomodation reviews section: 
+
+![Storyboard1](/DP2_Report/HCIStoryboard1.jpg)
+
+
+### Provide information about nearby welfares (such as restaurants, convenience stores…)
+
+
+
+
+### Provide summarized information in a thumbnail or profiles of hospitals
+
 
 
 
