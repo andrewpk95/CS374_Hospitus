@@ -18,8 +18,8 @@ A person who suffers from sports injury [user] needs to find a good hospital wit
 
 ## 2. Persona
 
-| ![Chappelle](/Chappelle.jpg) | Name: Mr. Chappelle<br/> Age: 25<br/> Job: Comedian<br/> Hobby: Praying, American football<br/> Religion: Muslim<br/> Dislikes: Little kids, Dirty bathrooms<br/> Goal: To search for a good hospital to stay in for how many weeks|
-|-------|------|
+| ![Chappelle](/DP2_Report/Chappelle.png) | Name: Mr. Chappelle<br/> Age: 25<br/> Job: Comedian<br/> Hobby: Praying, American football<br/> Religion: Muslim<br/> Dislikes: Little kids, Dirty bathrooms<br/> Goal: To search for a good hospital to stay in for how many weeks|
+|-------|:------|
 
 Story: 
 - Mr. Chappelle is staying in Korea to shoot a comedy show.
@@ -28,6 +28,7 @@ Story:
 - He has never sustained any big injuries before, so he hasn’t searched for hospitals before.
 - He is a foreigner Korea, so he doesn’t have any acquaintances to help and he has a language barrier
 - Now he has to find a hospital to get treatment and stay
+
 PS:
 - Mr. Chappelle does not like spending money.
 - Mr. Chappelle wants halal meals.
