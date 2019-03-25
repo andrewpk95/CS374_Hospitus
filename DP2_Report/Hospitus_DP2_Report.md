@@ -96,12 +96,12 @@ PS:
 
 ### Provide information about nearby welfares (such as restaurants, convenience stores…)
 
-
+![Storyboard2](/DP2_Report/HCIStoryboard2.jpg)
 
 
 ### Provide summarized information in a thumbnail or profiles of hospitals
 
-
+![Storyboard3](/DP2_Report/HCIStoryboard3.png)
 
 
 ## 6. Studio Reflections
