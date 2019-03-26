@@ -18,8 +18,9 @@ A person who suffers from sports injury [user] needs to find a good hospital wit
 
 ## 2. Persona
 
-| ![Chappelle](/DP2_Report/Chappelle.png) | Name: Mr. Chappelle<br/> Age: 25<br/> Job: Comedian<br/> Hobby: Praying, American football<br/> Religion: Muslim<br/> Dislikes: Little kids, Dirty bathrooms<br/> Goal: To search for a good hospital to stay in for how many weeks|
+|       |       |
 |-------|:------|
+| ![Chappelle](/DP2_Report/Chappelle.png) | Name: Mr. Chappelle<br/> Age: 25<br/> Job: Comedian<br/> Hobby: Praying, American football<br/> Religion: Muslim<br/> **Motivation:** To get better ASAP to get back to his work.<br/> **Beliefs:** He believes that good environment is an important part of treatment<br/> **Preferences:** Clean hospital room with ample space, preferably a solitary room. No little kids around. Clean bathrooms.<br/> **Goals:** To search for a good hospital to stay in for how many weeks|
 
 Story: 
 - Mr. Chappelle is staying in Korea to shoot a comedy show.
@@ -37,6 +38,8 @@ PS:
 
 ## 3. HMW Questions
 
+(The Top 3 HMW questions are in **bold**.)
+
 1. **HMW provide information about the accommodation quality of a hospital?**
 2. HMW find out if insurance covers the fees?
 3. **HMW make sure the hospital is available?**
@@ -48,8 +51,24 @@ PS:
 9. HMW find the best way to go to hospital?
 10. HMW find a close hospital?
 
+**Selection criteria:**
+- Feasibility: Does this question inspire potential solutions?
+- Relevance: Does this question relate to the POV and the target user?
+- Distinctness: Does this question not overlap with other questions chosen?
+
+**Choosing Procedure:**
+- Each person got 5 stickers.
+- Stickers were put on the HMW question that we thought that met the criteria above. 
+- The three highest-voted questions were chosen. 
+
+*How does the Top 3 questions relate to our target users?*
+- Physically injured patients generally are asked to be hospitalized for a long period of time. Therefore the information about the accommodation would be much more important than other general patients.
+- Physically injured patients are in an urgent situation and in a lot of pain. Minimizing the time that is required to get the treatment is much more important than the general patients. Also, not being able to get treatment in time for physically injured patients could result in lifelong side effects. Therefore, the time required to find the appropriate hospital and the availability of the hospitals is crucial to patients who have acquired physical injuries.
+
 
 ## 4. Solution Ideas
+
+(The Top 3 Solution Ideas are in **bold**.)
 
 ### 1. HMW provide information about the accommodation quality of a hospital?
 - **Create accomodation reviews section**
@@ -86,6 +105,16 @@ PS:
 - Call insurance company and ask for advice
 - Use local maps, or road signs
 
+**Selection Criteria:**
+- Effectiveness: Is the solution useful to the user?
+- Novelty: Is the solution creative enough and has distinguishable features compared to other existing services?
+- Feasibility: Can the solution be implemented?
+
+**Choosing Procedure:**
+- Each person got 5 stickers.
+- Stickers were put on the solutions that we thought that met the criteria above. 
+- The three highest-voted solutions were chosen. 
+
 
 ## 5. Storyboards
 
@@ -106,5 +135,16 @@ PS:
 
 ## 6. Studio Reflections
 
+**Constructive Feedbacks:**
+- The description of our persona is very detailed -> Provide detailed information when necessary
+- The first storyboard quality is high -> Keep the quality of visual information high. 
+- Solutions are specific and implementable -> Try and focus on detailed solutions as the project continues so that it will be easier to implement it into an actual system.
+
+**Feedbacks to be addressed:**
+- The point of view was not in a full sentence in the slides -> Make sure to explain information in detail.
+- Add solution describing the storyboards -> Try to represent information in a more related form when presenting
+- Needs description of how we chose the top 3 HMW questions and Solutions -> Add descriptions of the decision making process
+- Try to make needs and solutions more specific to the target users -> Make sure to explain how information in our project is more relevant to the target users than general users.
+- Make the service differentiated from other services out there -> Add detailed information that other services miss out. Make process faster and more efficient than already available solutions.
 
 
