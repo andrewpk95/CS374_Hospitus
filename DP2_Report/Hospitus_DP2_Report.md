@@ -20,7 +20,7 @@ A person who suffers from sports injury [user] needs to find a good hospital wit
 
 |       |       |
 |-------|:------|
-| ![Chappelle](/DP2_Report/Chappelle.png) | Name: Mr. Chappelle<br/> Age: 25<br/> Job: Comedian<br/> Hobby: Praying, American football<br/> Religion: Muslim<br/> **Motivation:** To get better ASAP to get back to his work.<br/> **Beliefs:** He believes that good environment is an important part of treatment<br/> **Preferences:** Clean hospital room with ample space, preferably a solitary room. No little kids around. Clean bathrooms.<br/> **Goals:** To search for a good hospital to stay in for how many weeks|
+| ![Chappelle](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP2_Report/Chappelle.png) | Name: Mr. Chappelle<br/> Age: 25<br/> Job: Comedian<br/> Hobby: Praying, American football<br/> Religion: Muslim<br/> **Motivation:** To get better ASAP to get back to his work.<br/> **Beliefs:** He believes that good environment is an important part of treatment<br/> **Preferences:** Clean hospital room with ample space, preferably a solitary room. No little kids around. Clean bathrooms.<br/> **Goals:** To search for a good hospital to stay in for how many weeks|
 
 Story: 
 - Mr. Chappelle is staying in Korea to shoot a comedy show.
@@ -120,17 +120,17 @@ PS:
 
 ### Create accomodation reviews section: 
 
-![Storyboard1](/DP2_Report/HCIStoryboard1.jpg)
+![Storyboard1](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP2_Report/HCIStoryboard1.jpg)
 
 
 ### Provide information about nearby welfares (such as restaurants, convenience stores…)
 
-![Storyboard2](/DP2_Report/HCIStoryboard2.jpg)
+![Storyboard2](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP2_Report/HCIStoryboard2.jpg)
 
 
 ### Provide summarized information in a thumbnail or profiles of hospitals
 
-![Storyboard3](/DP2_Report/HCIStoryboard3.png)
+![Storyboard3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP2_Report/HCIStoryboard3.png)
 
 
 ## 6. Studio Reflections
