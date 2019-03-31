@@ -18,8 +18,20 @@ Target User: Foreigners in Korea with sports injury who lack information in Kore
 
 ## 1. Photos of Prototype
 
-![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/3.jpg)
+| | |
+|-|-|
+|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/3.jpg)|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/4.jpg)|
+- Selecting injury from drop down view will show search results.
 
+| | |
+|-|-|
+|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/5.jpg)|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/6.jpg)|
+- Selecting the hospital picture or the name will show the reviews page for the hospital.
+
+| | |
+|-|-|
+|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/7.jpg)|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/8.jpg)|
+- Choosing different sort methods will change the search results
 
 ## 2. Participants
 
