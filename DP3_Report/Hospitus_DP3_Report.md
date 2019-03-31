@@ -89,15 +89,15 @@ Our tasks are related to our target user because...
 
 I played the role of a ‘computer’ throughout the testing process, doing the paper prototype for the participants. I processed the user’s inputs (clicking on the paper prototype) and layed out outputs (hospital search results, review page…) for the users. One difficulty I faced playing the role was remembering all possibility of actions the participants might take and processing it. Another difficulty I faced was rummaging through the paper finding the right review page for the user. Even though I practiced with the paper prototype beforehand, every new session made me nervous which did not let me focus in performing well as a computer role. As a ‘computer’ role, I learned how hard it is for humans to act as a computer, and learned to appreciate the computers doing the processing for us. 
 
-## 20130760 Junho Son (Role: Facilitator)
+### 20130760 Junho Son (Role: Facilitator)
 
 I was the facilitator of our group. There was not much explanation to do for the tester because the briefing was pretty much enough to explain the function of the prototype. One thing I had to do was to explain what could be clicked for further interactions and what couldn’t be. Overall the job was not very difficult.
 
-## 20150002 Dorjnyam (Role: Observer)
+### 20150002 Dorjnyam (Role: Observer)
 
 
 
-## 20160738 Van Hoang (Role: Observer)
+### 20160738 Van Hoang (Role: Observer)
 
 
 
