@@ -35,7 +35,19 @@ Target User: Foreigners in Korea with sports injury who lack information in Kore
 
 ## 2. Participants
 
-
+1. German. Male. Exchange student in KAIST. Likes to draw comics. 
+ * Recruited by Andrew Kim, shares a club with him. 
+ * He has difficulty finding hospitals other than Pappalado due to language barrier. 
+ * His hospital choice is limited to Pappalado because he is not sure if other hospitals are good enough 
+2. Mongolian. Male. Student in KAIST
+ * Recruited by Dorjnyam
+ * Plays basketball
+ * Was injured before
+ * Had a hard time getting hospitalized
+3. Thai. Male. Freshman in KAIST. Like playing basketball.
+ * Recruited by Van Hoang, taking a class with him
+ * He has been in Korea for just one month, so he lacks information about hospital in Korea
+ * Have difficulty finding a good hospital since he does not understand Korean.
 
 
 ## 3. Briefing
