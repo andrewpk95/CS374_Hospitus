@@ -131,9 +131,3 @@ Based on the last feedback we will change tasks into:
 1. Find the hospital that suits you using ratings and equipment and treatment they provide.
 2. Verify the hospital you chose has sufficient nearby conveniences you might need.
 3. Provide information on the hospital that you’ve been to.
-
-
-**Feedbacks to be addressed:**
-- 
-
-
