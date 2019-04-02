@@ -103,21 +103,35 @@ I played the role of a ‘computer’ throughout the testing process, doing the 
 
 ### 20130760 Junho Son (Role: Facilitator)
 
-I was the facilitator of our group. There was not much explanation to do for the tester because the briefing was pretty much enough to explain the function of the prototype. One thing I had to do was to explain what could be clicked for further interactions and what couldn’t be. Overall the job was not very difficult.
+I was the facilitator of the group and my job was to make the prototype test run smoothly. Although the briefing and the tasks handed to the user were sufficiently explanatory on the instructions to maneuver through the paper prototype, sometimes users could not find what to click to get to the place they wanted. Also, users did not know where the information they wanted was displayed. Overall, I did manage to run the tests pretty smooth but I realized that without the facilitator, the users might have a difficult time getting what they want from our service. It looks like there is much more to improve on learnability of our product.
 
 ### 20150002 Dorjnyam (Role: Observer)
 
-
+I observed the users’ interaction. Not all functions were easily visible to the user. So they had trouble navigating (e.g. back button). 
 
 ### 20160738 Van Hoang (Role: Observer)
 
-
+I was one of the observer during multiple sessions of testing process, and all I did was just making observations about users’ interaction. I noticed that sometimes users got confused and they had trouble finding the right way to perform some tasks due to the shortcoming of our prototype. Overall, the job was quite tedious, and one difficulty that I faced was sometimes I forgot to shut my mouth and give some small instructions to users. I tried to fix it by not repeating that mistakes again in later sessions.
 
 
 ## 7. Studio Reflections
 
 **Constructive Feedbacks:**
-- 
+- The tasks are well user focused, the scope of tasks is proper at user level
+- Tablized information of observation induced problems and solutions
+
+**Feedbacks to be addressed:**
+- The information may be too descriptive for emergent patients -> Make information more visual and faster to access. e.g.) Add icons for equipments
+- Add more search options -> Add search according to the area of injury, not the type of injury
+- The briefing was difficult to read -> Highlight or underline the keywords
+- Users might not be able to use hands -> Try to implement voice UI in prototype.
+- The three tasks are all somewhat similar: finding the hospital that works for you -> Merge the original tasks into one and create two distinct tasks.
+
+Based on the last feedback we will change tasks into:
+1. Find the hospital that suits you using ratings and equipment and treatment they provide.
+2. Verify the hospital you chose has sufficient nearby conveniences you might need.
+3. Provide information on the hospital that you’ve been to.
+
 
 **Feedbacks to be addressed:**
 - 
