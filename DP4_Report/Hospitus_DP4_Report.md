@@ -120,20 +120,20 @@ Originally, we made a make a review page, but could not make it functional as In
 ## 4. Paper vs Digital 
 
 1. Types of usability issues they helped identify:
-* Facilitator could help during paper prototyping when unexpected situations occurred, but Lo-fi prototyping didn’t have a facilitator. Issue of learnability was more highlighted.
+- Facilitator could help during paper prototyping when unexpected situations occurred, but Lo-fi prototyping didn’t have a facilitator. Issue of learnability was more highlighted.
 
 2. Participants’ Expectations and Reactions:
-* Reaction speed was much higher. Users were much more satisfied
-* Readability: Users could read digital text faster than poorly handwritten text.
-* Users expected more freedom than the paper prototype, but Invision restriction turned down those expectations a little bit because it doesn’t allow users to give text inputs.
+- Reaction speed was much higher. Users were much more satisfied
+- Readability: Users could read digital text faster than poorly handwritten text.
+- Users expected more freedom than the paper prototype, but Invision restriction turned down those expectations a little bit because it doesn’t allow users to give text inputs.
 
 3. Changes made from paper prototype:
-* Nearby conveniences page was added to help users figure out what they could find around the hospital.
-* Drop down menu of injury was changed to describe just body parts, so that it was easier for users to choose.
-* The sort buttons were drop down but was changed to radio for learnability and there were more search categories added.
-* Users can rate the hospital.
-* Go back buttons were added.
-* Users can view what kind of rooms are offered by hospital
+- Nearby conveniences page was added to help users figure out what they could find around the hospital.
+- Drop down menu of injury was changed to describe just body parts, so that it was easier for users to choose.
+- The sort buttons were drop down but was changed to radio for learnability and there were more search categories added.
+- Users can rate the hospital.
+- Go back buttons were added.
+- Users can view what kind of rooms are offered by hospital
 
 
 ## 5. Studio Reflections
