@@ -88,33 +88,29 @@ Originally, we made a make a review page, but could not make it functional as In
 * [Critical: HIGH] The drop down view might not have the injury the patient has. (P1, P3)
   * Solution: Change the drop down menu into text input field, and include as many kinds of injuries as possible. 
 * [Critical: Medium] Users wanted to search by distance (how close the hospital is). (P2)
-  * 
-
+  * Solution: Add such feature in the next prototype. 
 * [Critical: Medium] There is no description of the equipments. Explanation is required. (P3)
-  * 
-
+  * Solution: Add a hover feature that displays equipment information when the user hovers on the equipment text. 
 * [Critical: Low] No contact information of the hospitals. (P2)
-  * 
+  * Solution: Add phone numbers of hospitals in the Hospital Page. 
 
 ### Task 2: Verify the hospital you chose has sufficient nearby conveniences you might need.
 * [Critical: Low] People may want to search for other types of nearby conveniences such as pharmacy; right now there are only three choices. (P3)
-  * 
-
+  * Solution: Add more radio buttons with more types of conveniences; or use Google Map API with the search function. 
 * [Critical: Low] Users want visualization of hospital address. (P3)
-  * 
+  * Solution: Show address on a map when users hover over the hospital picture or name
 
 ### Task 3: Provide information on the hospital that you’ve been to.
 * [Critical: Medium] There is no feedback after putting in rating; they don’t know whether their review is submitted or not. (P1, P2)
-  * Solution: 
+  * Solution: Give feedback after user gives rating
 * [Critical: Medium] Users want to enter more information to the review (such as comments) instead of simply rating the hospital. (P1, P2, P3)
-  * Solution: 
+  * Solution: Add text review in next prototype. As of now, with invision, it is difficult to implement more function regarding review
 
 ### Miscellaneous
 * [Critical: HIGH] Users might want to make a reservation at the hospital. (P3)
-  * 
-
+  * Solution: Add reservation function to each hospitals.
 * [Critical: Low] The “Back Button” in the Nearby Conveniences Page takes you back to the Search Page instead of the Hospital Page, which may be unintuitive for some users. (P1)
-  * 
+  * Solution: Fix the naming from “Back to Search Results” to “Go Back to Hospital Page” and fix the button’s function. 
 
 
 ## 4. Paper vs Digital 
