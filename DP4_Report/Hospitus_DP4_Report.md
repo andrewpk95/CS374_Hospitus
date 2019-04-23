@@ -1,4 +1,4 @@
-# CS374 DP3 Report - Paper Prototyping
+# CS374 DP4 Report - Lo-fi Prototyping
 
 Team Hospitus
 
@@ -11,123 +11,142 @@ Team Hospitus
 20160738 Van Hoang
 
 
-## 0. Change from Last Report
+## 1. POV & Tasks
 
-Target User: Foreigners in Korea with sports injury who lack information in Korea. 
+### POV
 
+A foreigner who suffers from sports injury [user] needs to find a good hospital with ample accommodation space quickly [needs] because without information, he or she may waste a lot of time jumping between hospitals [insights]. 
 
-## 1. Photos of Prototype
+### Tasks
 
-| | |
-|-|-|
-|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/3.jpg)|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/4.jpg)|
-- Selecting injury from drop down view will show search results.
-
-| | |
-|-|-|
-|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/5.jpg)|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/6.jpg)|
-- Selecting the hospital picture or the name will show the reviews page for the hospital.
-
-| | |
-|-|-|
-|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/7.jpg)|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP3_Report/8.jpg)|
-- Choosing different sort methods will change the search results
-
-## 2. Participants
-
-1. German. Male. Exchange student in KAIST. Likes to draw comics. 
- * Recruited by Andrew Kim, shares a club with him. 
- * He has difficulty finding hospitals other than Pappalado due to language barrier. 
- * His hospital choice is limited to Pappalado because he is not sure if other hospitals are good enough 
-2. Mongolian. Male. Student in KAIST
- * Recruited by Dorjnyam
- * Plays basketball
- * Was injured before
- * Had a hard time getting hospitalized
-3. Thai. Male. Freshman in KAIST. Like playing basketball.
- * Recruited by Van Hoang, taking a class with him
- * He has been in Korea for just one month, so he lacks information about hospital in Korea
- * Have difficulty finding a good hospital since he does not understand Korean.
-
-
-## 3. Briefing
-
-Hospitus helps foreigners find the hospital they need. With Hospitus you can select your injury. For example, you can select “cuts and puncture wounds”. Hospitus will come up with a list of hospitals you can get further information. On the search result page, you will be able to see summarized important information of each hospital. If you click the hospital name, you will be able to view reviews that other foreigners wrote about the hospital in English. 
-
-
-## 4. Tasks
-
-1. Find the hospital with the best rating on service
-2. Find the hospital that has the equipments and treatments required
-3. Find the hospital that has enough accommodation
-
-Our tasks are related to our target user because...
-
-- Foreigners unlike locals, don’t have a lot of friends or acquaintances in Korea to suggest hospitals to use. It is difficult for them to find the hospitals that suits them and having a validation system created by other fellow foreigners can help them find a hospital.
-- Since the foreigners are experiencing language barriers, they have a hard time contacting the hospitals ahead and asking them about the information of the hospital, or finding them online. Hospitus can provide that information fast and easy so that the foreigners know what they are getting into.
-
-
-## 5. Observations
-
-### Task 1: Find the hospital with the best rating on service
-* [Critical: HIGH] There is no option to sort by the service rating in the search results page (right now it only has sort option by overall rating). (P1, P2, P3)
-  * Solution: Add the options to sort search results by Service, Food, Hygiene, and Location ratings. 
-* [Critical: Medium] The patient has a hard time locating where the information of service rating is in the review page. (P2, P3)
-  * Solution: Make ratings stand out more than other elements in the review page. 
-* [Critical: Low] The patient does not see the actual numbers for service rating. (P1)
-  * Solution: Display numbers for other ratings as well. 
-* [Critical: Low] The patient does not understand that the biggest font rating is the overall rating. (P2)
-  * Solution: Change the label to “Overall Rating” to clarify. 
-### Task 2: Find the hospital that has the equipments and treatments required
-* [Critical: HIGH] The patient does not know which equipment he actually needs to look for when he or she chooses a certain injury. (P1, P2, P3) 
-  * Solution: Tell the user in the search page that search results are displayed by the equipment that the patient needs (ex. User selects “Broken Bone” for the injury, search page tells the user that it searched for hospitals that has the “X-Ray” equipment). 
-* [Critical: Medium] The drop down view might not have the injury the patient has. (P1)
-  * Solution: Change the drop down menu into text input field, and include as many kinds of injuries as possible. 
-* [Critical: Low] With the drop down view system for the injury, it is difficult to locate and choose the injury the patient is looking for. (P1)
-  * Solution: Change the drop down menu into text input field and make it into autocomplete. 
-### Task 3: Find the hospital that has enough accommodation
-* [Critical: Medium] The patient could not find out how to sort the search results by availability (hidden by the drop-down menu) (P3)
-  * Solution: Instead of drop down menu for the Sort By, lay out sorting options into radio buttons. 
-* [Critical: Low] The patient wants to know what type of rooms are available, such as single rooms and double rooms. (P2)
-  * Solution: Provide such additional information in the review page. 
-### Miscellaneous
-* [Critical: HIGH] There is no go-back button in the review page. (P1, P2, P3)
-  * Solution: Create go-back buttons for the review pages.
-
-
-## 6. Individual Reflections
-
-### 20130736 Andrew Kim (Role: Computer)
-
-I played the role of a ‘computer’ throughout the testing process, doing the paper prototype for the participants. I processed the user’s inputs (clicking on the paper prototype) and layed out outputs (hospital search results, review page…) for the users. One difficulty I faced playing the role was remembering all possibility of actions the participants might take and processing it. Another difficulty I faced was rummaging through the paper finding the right review page for the user. Even though I practiced with the paper prototype beforehand, every new session made me nervous which did not let me focus in performing well as a computer role. As a ‘computer’ role, I learned how hard it is for humans to act as a computer, and learned to appreciate the computers doing the processing for us. 
-
-### 20130760 Junho Son (Role: Facilitator)
-
-I was the facilitator of the group and my job was to make the prototype test run smoothly. Although the briefing and the tasks handed to the user were sufficiently explanatory on the instructions to maneuver through the paper prototype, sometimes users could not find what to click to get to the place they wanted. Also, users did not know where the information they wanted was displayed. Overall, I did manage to run the tests pretty smooth but I realized that without the facilitator, the users might have a difficult time getting what they want from our service. It looks like there is much more to improve on learnability of our product.
-
-### 20150002 Dorjnyam (Role: Observer)
-
-I observed the users’ interaction. Not all functions were easily visible to the user. So they had trouble navigating (e.g. back button). 
-
-### 20160738 Van Hoang (Role: Observer)
-
-I was one of the observer during multiple sessions of testing process, and all I did was just making observations about users’ interaction. I noticed that sometimes users got confused and they had trouble finding the right way to perform some tasks due to the shortcoming of our prototype. Overall, the job was quite tedious, and one difficulty that I faced was sometimes I forgot to shut my mouth and give some small instructions to users. I tried to fix it by not repeating that mistakes again in later sessions.
-
-
-## 7. Studio Reflections
-
-**Constructive Feedbacks:**
-- The tasks are well user focused, the scope of tasks is proper at user level
-- Tablized information of observation induced problems and solutions
-
-**Feedbacks to be addressed:**
-- The information may be too descriptive for emergent patients -> Make information more visual and faster to access. e.g.) Add icons for equipments
-- Add more search options -> Add search according to the area of injury, not the type of injury
-- The briefing was difficult to read -> Highlight or underline the keywords
-- Users might not be able to use hands -> Try to implement voice UI in prototype.
-- The three tasks are all somewhat similar: finding the hospital that works for you -> Merge the original tasks into one and create two distinct tasks.
-
-Based on the last feedback we will change tasks into:
 1. Find the hospital that suits you using ratings and equipment and treatment they provide.
 2. Verify the hospital you chose has sufficient nearby conveniences you might need.
 3. Provide information on the hospital that you’ve been to.
+
+Our tasks are related to our target user because...
+
+1. Foreigners unlike locals, don’t have a lot of friends or acquaintances in Korea to suggest hospitals to use. It is difficult for them to find the hospitals that suits them and having a validation system created by other fellow foreigners can help them find a hospital.
+2. Since the foreigners are experiencing language barriers, they have a hard time contacting the hospitals ahead and asking them about the information of the hospital, or finding them online. Hospitus can provide that information fast and easy so that the foreigners know what they are getting into.
+3. Users can express how they felt about the hospitals they have been to, and help other potential users
+
+
+## 2. Prototype
+
+### URL: https://invis.io/9SRES2CD6JM
+
+### Prototype Tool
+
+Our team used InVision for prototyping tool, provided by the class. InVision really allowed us to make our prototype look like an actual working app, but some functions were missing or limited so that we could not fully implement all aspects of the prototype. 
+
+### Representative screenshots
+
+#### 1. Selecting Injury
+
+![1](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP4_Report/1.png)
+
+**Instruction:** Clicking the logo at the top takes user to this page, just like many popular websites.
+Simply, hovering over the highlighted injury text box will show the drop down menu. We implemented this way for high learnability. Then, the user can click the injury to get to search results.
+
+![2](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP4_Report/2.png)
+
+**Design Choice:** Originally, we wanted to implement a text input with autocomplete drop down menu, but Invision does not allow text input.
+
+#### 2. Search Result
+
+![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP4_Report/3.png)
+
+**Design Choices:** Search results show hospitals in order according to different categories. Originally this was a drop down menu, but it was changed into radio buttons for learnability. User can simply choose the category that is most important to him/her for easier search.
+
+Hospitals’ information and ratings are included in each box alongside the name and picture of the hospital. 
+
+**Instruction:** Clicking anywhere on this box will take user to the review page of the respective hospital.
+
+#### 3. Review Page
+
+![4](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP4_Report/4.png)
+
+**Instruction:** User can click nearby conveniences to view where the hospital is and how nearby conveniences are distributed. There is a back button to navigate the user back to the search results. User can give rating by clicking on the empty stars
+
+**Design Choices:** The information of the hospital is given in same format as search results page so that it is user-friendly. Different ratings are given as well. Buttons that can be clicked are highlighted.
+
+Originally, we made a make a review page, but could not make it functional as Invision does not allow any text input. Therefore, it was replaced by rating with stars. Also, Invision only allows one overlay at a time which restricted us to make only one rating for each review page.
+
+#### 4. Nearby Conveniences Page
+
+![5](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP4_Report/5.png)
+
+**Instructions:** User can click on different radio buttons to display different conveniences around the hospital. There is a back button to go back to the search results page.
+
+**Design Choices:** Nearby conveniences are pinpointed on the map for visibility. User can easily navigate through radio buttons.
+
+
+## 3. Observations
+
+### Task 1: Find the hospital that suits you using ratings and equipment and treatment they provide.
+* [Critical: HIGH] Patient is unaware of treatment and equipment that is required for their selected injury. (P1, P2, P3) 
+  * Solution: Tell the user in the search page that search results are displayed by the equipment that the patient needs (ex. User selects “Broken Bone” for the injury, search page tells the user that it searched for hospitals that has the “X-Ray” equipment). 
+* [Critical: HIGH] The drop down view might not have the injury the patient has. (P1, P3)
+  * Solution: Change the drop down menu into text input field, and include as many kinds of injuries as possible. 
+* [Critical: Medium] Users wanted to search by distance (how close the hospital is). (P2)
+  * 
+
+* [Critical: Medium] There is no description of the equipments. Explanation is required. (P3)
+  * 
+
+* [Critical: Low] No contact information of the hospitals. (P2)
+  * 
+
+### Task 2: Verify the hospital you chose has sufficient nearby conveniences you might need.
+* [Critical: Low] People may want to search for other types of nearby conveniences such as pharmacy; right now there are only three choices. (P3)
+  * 
+
+* [Critical: Low] Users want visualization of hospital address. (P3)
+  * 
+
+### Task 3: Provide information on the hospital that you’ve been to.
+* [Critical: Medium] There is no feedback after putting in rating; they don’t know whether their review is submitted or not. (P1, P2)
+  * Solution: 
+* [Critical: Medium] Users want to enter more information to the review (such as comments) instead of simply rating the hospital. (P1, P2, P3)
+  * Solution: 
+
+### Miscellaneous
+* [Critical: HIGH] Users might want to make a reservation at the hospital. (P3)
+  * 
+
+* [Critical: Low] The “Back Button” in the Nearby Conveniences Page takes you back to the Search Page instead of the Hospital Page, which may be unintuitive for some users. (P1)
+  * 
+
+
+## 4. Paper vs Digital 
+
+1. Types of usability issues they helped identify:
+* Facilitator could help during paper prototyping when unexpected situations occurred, but Lo-fi prototyping didn’t have a facilitator. Issue of learnability was more highlighted.
+
+2. Participants’ Expectations and Reactions:
+* Reaction speed was much higher. Users were much more satisfied
+* Readability: Users could read digital text faster than poorly handwritten text.
+* Users expected more freedom than the paper prototype, but Invision restriction turned down those expectations a little bit because it doesn’t allow users to give text inputs.
+
+3. Changes made from paper prototype:
+* Nearby conveniences page was added to help users figure out what they could find around the hospital.
+* Drop down menu of injury was changed to describe just body parts, so that it was easier for users to choose.
+* The sort buttons were drop down but was changed to radio for learnability and there were more search categories added.
+* Users can rate the hospital.
+* Go back buttons were added.
+* Users can view what kind of rooms are offered by hospital
+
+
+## 5. Studio Reflections
+
+**Constructive Feedbacks:**
+- The prototype looks clean and professional, and has good design. 
+- The new tasks better represent users’ problems
+- Feedback/solution table was easy to understand.
+- The prototype is easy to follow: Good Learnability.
+
+**Feedbacks to be addressed:**
+- Injuries could include pictures for better interaction -> change drop down menu into a list of pictures.
+- Login feature could be required -> Login feature could be added for making reviews later on in different prototype to prevent malicious anonymous reviews.
+- Rating is repetitive for sorting option -> Reduce options into keywords for better visibility.
+- Try considering foreigner-specific factors -> Include foreigner specific information in the review page of hospitals.
+- Mobile version would have been better for our app’s purpose -> Focus later projects into making mobile version of the web. 
