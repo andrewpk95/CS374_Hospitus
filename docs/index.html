@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Capital Game!</title>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link href="./capital_game.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--Your HTML here-->
+    <script src="jquery/js/jquery-1.9.0.min.js"></script>
+    <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+    <script src="./capital_game.js"></script>
+    <h1 class="title">Do you know the capital of this country?</h1>
+    <div class="content">
+      <table class="history">
+        <tr class="table_header">
+          <th>Country</th>
+          <th>Capital</th>
+          <th>Answer</th>
+        </tr>
+        <tr class="filter">
+          <td colspan="3">
+            <input id="all_filter" type="radio" name="filter" value="all" checked> All
+            <input id="correct_filter" type="radio" name="filter" value="correct"> Correct Only
+            <input id="wrong_filter" type="radio" name="filter" value="wrong"> Wrong Only
+          </td>
+        </tr>
+        <tr class="submit_list">
+          <td><text id="pr2__question">Republic of Korea</text></td>
+          <td><input id="pr2__answer" type=text name=answer size=20 placeholder="Your Answer Here" autofocus></td>
+          <td><input id="pr2__submit" type=button value="See Answer"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
