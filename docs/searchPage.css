@@ -1,3 +1,28 @@
 body {
-    background-color: cyan;
+    
+}
+.checked {
+	color: yellow;
+
+}
+
+.fa-star {
+	font-size: 30px;
+}
+
+.result {
+	background-color: #C0C0C0;
+	padding: 8px;
+	min-height: 100px;
+	overflow: hidden;
+
+}
+
+img {
+	width: 200px; 
+	height: 128px;
+}
+
+p {
+	font-size: 20px;
 }
