@@ -1,3 +1,24 @@
 body {
     background-color: white;
 }
+.sumsang {
+    float: left;
+    width: 30%;
+}
+.sumsang-img {
+    width: 100%;
+}
+.radio-buttons {
+    display: block;
+    float: left;
+    margin-left: 100px;
+    font-size: 20px;
+}
+.conv-img {
+    float: right;
+    width: 40%;
+    margin-right: 200px;
+}
+.conv-image {
+    max-width: 100%;
+}
