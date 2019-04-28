@@ -10,3 +10,6 @@ body {
     background-color: #C0C0C0;
 }
 
+.checked {
+    color: red;
+}
