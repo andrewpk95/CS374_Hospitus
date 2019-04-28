@@ -5,15 +5,52 @@
     <title>Search Result</title>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+
     <link href="./searchPage.css" rel="stylesheet" />
   </head>
   <body>
     <!--Your HTML here-->
+
+    <h1 class="title">Search Results</h1>
+    Sort by: 
+    
+      <input type="radio" name="sort_category" checked> Overall
+      <input type="radio" name="sort_category"> Accommodation 
+      <input type="radio" name="sort_category"> Hygiene 
+      <input type="radio" name="sort_category"> Service 
+      <input type="radio" name="sort_category"> Food 
+      <input type="radio" name="sort_category"> Location    
+
+      <div class="result">
+        <a href="hospitalPage.html">
+        <h2>Sumsang Hospital</h2>
+        <div style="float: left; width: 20%">
+          <img src="sumsang.jpg">
+        </div>
+        </a>
+        <div>
+          <p> 
+            <b> Address: </b> 1516 Yuseong, Daejeon <br>
+            <b> Speciality: </b> Back Injury <br>
+            <b> Equipment: </b> X-Ray, CT/PET, MRI, Manual Therapy <br>
+            <b> Accomodation: </b> 16/20 available
+          </p> 
+          <br>
+          <div style="float: right">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+      </div>
+   
     <script src="jquery/js/jquery-1.9.0.min.js"></script>
     <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
     <script src="./searchPage.js"></script>
-    <h1 class="title">Search Results:</h1>
-    <a href="hospitalPage.html">Go to Hospital Page</a>
+    
+
   </body>
 </html>
