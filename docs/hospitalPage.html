@@ -8,14 +8,28 @@
     <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
     <link href="./hospitalPage.css" rel="stylesheet" />
 </head>
-  <body>
+<body>
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD-e_P1cNEw6FQCOtKE6hm4i1plJb3KV9Y",
+    authDomain: "cs374-hospitus-database.firebaseapp.com",
+    databaseURL: "https://cs374-hospitus-database.firebaseio.com",
+    projectId: "cs374-hospitus-database",
+    storageBucket: "cs374-hospitus-database.appspot.com",
+    messagingSenderId: "31232394715",
+    appId: "1:31232394715:web:b5306dfaaa9ff6b2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    </script>
     <!--Your HTML here-->
     <script src="jquery/js/jquery-1.9.0.min.js"></script>
     <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
     <script src="./hospitalPage.js"></script>
     <a href="searchPage.html">
-      <input class="backButton" type="button" value="Back to Search Results" />
+        <input class="backButton" type="button" value="Back to Search Results" />
     </a>
     <div>
         <h1>Sumsang Hospital</h1>
@@ -31,7 +45,7 @@
                 <b> Accomodation: </b> 16/20 available <br>
                 <b> Rooms Available: </b> Quadruples(2 left), Doubles(2 left) <br>
             </p>
-        </div><br/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <h2>
             Overall Rating: <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -64,6 +78,6 @@
             <span class="fa fa-star checked"></span> (4.0)
         </h3>
     </div>
-      <h1>Reviews:</h1>
-  </body>
+    <h1>Reviews:</h1>
+</body>
 </html>
