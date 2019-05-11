@@ -1,24 +1,99 @@
-body {
-    background-color: white;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: rgb(248, 248, 248);
 }
-.sumsang {
-    float: left;
-    width: 30%;
+
+#conv-page {
+    display: grid;
+    grid-template:
+        "header"min-content "main"auto "footer"3rem / auto;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: #999; */
 }
-.sumsang-img {
+
+header {
+    grid-area: header;
+    padding: 0;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template:
+        "title"
+        "options"
+        "map";
+    grid-template-rows: min-content min-content 1fr;
+    /* height: 100%;
+    width: 100%; */
+}
+
+main .hospital-title {
+    grid-area: title;
+    /* background-color: rgb(160, 160, 160); */
+    font-size: 1.5rem;
+    padding: 1em;
+}
+
+main .conv-options {
+    grid-area: options;
+    /* background-color: rgb(200, 200, 200); */
+    font-size: 1.2rem;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main .conv-map {
+    grid-area: map;
+    /* background-color: rgb(240, 240, 240); */
+    display: flex;
+    padding: 1em;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
 }
-.radio-buttons {
-    display: block;
-    float: left;
-    margin-left: 100px;
-    font-size: 20px;
+
+footer {
+    grid-area: footer;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.conv-img {
-    float: right;
-    width: 40%;
-    margin-right: 200px;
+
+.ui.menu .item {
+    padding: 0.5em 2em;
 }
-.conv-image {
-    max-width: 100%;
+
+#ui-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#google-map {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    main {
+        grid-template:
+            ". title ."min-content ". options ."min-content ". map ."auto / 1fr 5fr 1fr;
+    }
+
+    .conv-options {
+        justify-content: center;
+        padding: 2em;
+        width: 100%;
+    }
 }
