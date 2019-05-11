@@ -1,16 +1,17 @@
-$(document).ready(function(){
-    $("input:radio[name=option]").click(function() {
-        var value = $(this).val();
-        var image_name;
-        if(value == 'rest'){
-            image_name = "img/restaurant.png";
-        }else{
-            if(value == 'trans'){
-                image_name = "img/transportation.png";
-            }else{
-                image_name = "img/convstore.png";
-            }
-        }
-         $('#conv-image').attr('src', image_name);
-    });
+function resizeIFrameToFitContent(iFrame) {
+
+    iFrame.width = iFrame.contentWindow.document.body.scrollWidth;
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+}
+
+window.addEventListener('DOMContentLoaded', function (e) {
+
+    var iFrame = document.getElementById('google-map');
+    resizeIFrameToFitContent(iFrame);
+
+    // or, to resize all iframes:
+    var iframes = document.querySelectorAll("iframe");
+    for (var i = 0; i < iframes.length; i++) {
+        resizeIFrameToFitContent(iframes[i]);
+    }
 });
