@@ -33,5 +33,20 @@ $(document).ready(function () {
         var haccomodation = havailable + "/" + htotal;
         document.getElementById("accomodation").innerHTML = haccomodation;
     })
-
+    var room_list = [];
+    hr.once('value', function (snapshot) {
+        snapshot.child(hk).child("Types").forEach(function (ss1) {
+            var temp_list = [];
+            temp_list.push(ss1.key);
+            temp_list.push(ss1.val());
+            room_list.push(temp_list);
+        })
+        console.log(room_list)
+        var hrooms = ""
+        room_list.forEach(function (entry) {
+            hrooms = hrooms + entry[0] + ": " + entry[1].Available + "/" + entry[1].Total + " available, "
+        })
+        hrooms = hrooms.substring(0, hrooms.length - 2);
+        document.getElementById("rooms").innerHTML = hrooms;
+    })
 });
