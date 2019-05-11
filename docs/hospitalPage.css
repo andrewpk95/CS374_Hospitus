@@ -24,8 +24,10 @@ body {
 .reviews{
     display:grid;
     grid-template-columns: 2.5fr 1fr;
-    grid-gap: 1em;
+    grid-row-gap: 2em;
+    background: #eee;
 }
+
 
 .rating {
     display: grid;
@@ -35,6 +37,6 @@ body {
 }
 
 .makeReview{
-    width: 240px;
+    width: 200px;
     height: 100px;
 }

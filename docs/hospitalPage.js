@@ -279,4 +279,181 @@ $(document).ready(function () {
         }
     })
 
+    document.getElementById("ro5").onclick = function () {
+        document.getElementById("ro1").className = 'fa fa-star checked'
+        document.getElementById("ro2").className = 'fa fa-star checked'
+        document.getElementById("ro3").className = 'fa fa-star checked'
+        document.getElementById("ro4").className = 'fa fa-star checked'
+        document.getElementById("ro5").className = 'fa fa-star checked'
+    }
+    document.getElementById("ro4").onclick = function () {
+        document.getElementById("ro1").className = 'fa fa-star checked'
+        document.getElementById("ro2").className = 'fa fa-star checked'
+        document.getElementById("ro3").className = 'fa fa-star checked'
+        document.getElementById("ro4").className = 'fa fa-star checked'
+        document.getElementById("ro5").className = 'fa fa-star'
+    }
+    document.getElementById("ro3").onclick = function () {
+        document.getElementById("ro1").className = 'fa fa-star checked'
+        document.getElementById("ro2").className = 'fa fa-star checked'
+        document.getElementById("ro3").className = 'fa fa-star checked'
+        document.getElementById("ro4").className = 'fa fa-star'
+        document.getElementById("ro5").className = 'fa fa-star'
+    }
+    document.getElementById("ro2").onclick = function () {
+        document.getElementById("ro1").className = 'fa fa-star checked'
+        document.getElementById("ro2").className = 'fa fa-star checked'
+        document.getElementById("ro3").className = 'fa fa-star'
+        document.getElementById("ro4").className = 'fa fa-star'
+        document.getElementById("ro5").className = 'fa fa-star'
+    }
+    document.getElementById("ro1").onclick = function () {
+        document.getElementById("ro1").className = 'fa fa-star checked'
+        document.getElementById("ro2").className = 'fa fa-star'
+        document.getElementById("ro3").className = 'fa fa-star'
+        document.getElementById("ro4").className = 'fa fa-star'
+        document.getElementById("ro5").className = 'fa fa-star'
+    }
+    document.getElementById("rh5").onclick = function () {
+        document.getElementById("rh1").className = 'fa fa-star checked'
+        document.getElementById("rh2").className = 'fa fa-star checked'
+        document.getElementById("rh3").className = 'fa fa-star checked'
+        document.getElementById("rh4").className = 'fa fa-star checked'
+        document.getElementById("rh5").className = 'fa fa-star checked'
+    }
+    document.getElementById("rh4").onclick = function () {
+        document.getElementById("rh1").className = 'fa fa-star checked'
+        document.getElementById("rh2").className = 'fa fa-star checked'
+        document.getElementById("rh3").className = 'fa fa-star checked'
+        document.getElementById("rh4").className = 'fa fa-star checked'
+        document.getElementById("rh5").className = 'fa fa-star'
+    }
+    document.getElementById("rh3").onclick = function () {
+        document.getElementById("rh1").className = 'fa fa-star checked'
+        document.getElementById("rh2").className = 'fa fa-star checked'
+        document.getElementById("rh3").className = 'fa fa-star checked'
+        document.getElementById("rh4").className = 'fa fa-star'
+        document.getElementById("rh5").className = 'fa fa-star'
+    }
+    document.getElementById("rh2").onclick = function () {
+        document.getElementById("rh1").className = 'fa fa-star checked'
+        document.getElementById("rh2").className = 'fa fa-star checked'
+        document.getElementById("rh3").className = 'fa fa-star'
+        document.getElementById("rh4").className = 'fa fa-star'
+        document.getElementById("rh5").className = 'fa fa-star'
+    }
+    document.getElementById("rh1").onclick = function () {
+        document.getElementById("rh1").className = 'fa fa-star checked'
+        document.getElementById("rh2").className = 'fa fa-star'
+        document.getElementById("rh3").className = 'fa fa-star'
+        document.getElementById("rh4").className = 'fa fa-star'
+        document.getElementById("rh5").className = 'fa fa-star'
+    }
+    document.getElementById("rs5").onclick = function () {
+        document.getElementById("rs1").className = 'fa fa-star checked'
+        document.getElementById("rs2").className = 'fa fa-star checked'
+        document.getElementById("rs3").className = 'fa fa-star checked'
+        document.getElementById("rs4").className = 'fa fa-star checked'
+        document.getElementById("rs5").className = 'fa fa-star checked'
+    }
+    document.getElementById("rs4").onclick = function () {
+        document.getElementById("rs1").className = 'fa fa-star checked'
+        document.getElementById("rs2").className = 'fa fa-star checked'
+        document.getElementById("rs3").className = 'fa fa-star checked'
+        document.getElementById("rs4").className = 'fa fa-star checked'
+        document.getElementById("rs5").className = 'fa fa-star'
+    }
+    document.getElementById("rs3").onclick = function () {
+        document.getElementById("rs1").className = 'fa fa-star checked'
+        document.getElementById("rs2").className = 'fa fa-star checked'
+        document.getElementById("rs3").className = 'fa fa-star checked'
+        document.getElementById("rs4").className = 'fa fa-star'
+        document.getElementById("rs5").className = 'fa fa-star'
+    }
+    document.getElementById("rs2").onclick = function () {
+        document.getElementById("rs1").className = 'fa fa-star checked'
+        document.getElementById("rs2").className = 'fa fa-star checked'
+        document.getElementById("rs3").className = 'fa fa-star'
+        document.getElementById("rs4").className = 'fa fa-star'
+        document.getElementById("rs5").className = 'fa fa-star'
+    }
+    document.getElementById("rs1").onclick = function () {
+        document.getElementById("rs1").className = 'fa fa-star checked'
+        document.getElementById("rs2").className = 'fa fa-star'
+        document.getElementById("rs3").className = 'fa fa-star'
+        document.getElementById("rs4").className = 'fa fa-star'
+        document.getElementById("rs5").className = 'fa fa-star'
+    }
+    document.getElementById("rf5").onclick = function () {
+        document.getElementById("rf1").className = 'fa fa-star checked'
+        document.getElementById("rf2").className = 'fa fa-star checked'
+        document.getElementById("rf3").className = 'fa fa-star checked'
+        document.getElementById("rf4").className = 'fa fa-star checked'
+        document.getElementById("rf5").className = 'fa fa-star checked'
+    }
+    document.getElementById("rf4").onclick = function () {
+        document.getElementById("rf1").className = 'fa fa-star checked'
+        document.getElementById("rf2").className = 'fa fa-star checked'
+        document.getElementById("rf3").className = 'fa fa-star checked'
+        document.getElementById("rf4").className = 'fa fa-star checked'
+        document.getElementById("rf5").className = 'fa fa-star'
+    }
+    document.getElementById("rf3").onclick = function () {
+        document.getElementById("rf1").className = 'fa fa-star checked'
+        document.getElementById("rf2").className = 'fa fa-star checked'
+        document.getElementById("rf3").className = 'fa fa-star checked'
+        document.getElementById("rf4").className = 'fa fa-star'
+        document.getElementById("rf5").className = 'fa fa-star'
+    }
+    document.getElementById("rf2").onclick = function () {
+        document.getElementById("rf1").className = 'fa fa-star checked'
+        document.getElementById("rf2").className = 'fa fa-star checked'
+        document.getElementById("rf3").className = 'fa fa-star'
+        document.getElementById("rf4").className = 'fa fa-star'
+        document.getElementById("rf5").className = 'fa fa-star'
+    }
+    document.getElementById("rf1").onclick = function () {
+        document.getElementById("rf1").className = 'fa fa-star checked'
+        document.getElementById("rf2").className = 'fa fa-star'
+        document.getElementById("rf3").className = 'fa fa-star'
+        document.getElementById("rf4").className = 'fa fa-star'
+        document.getElementById("rf5").className = 'fa fa-star'
+    }
+    document.getElementById("rl5").onclick = function () {
+        document.getElementById("rl1").className = 'fa fa-star checked'
+        document.getElementById("rl2").className = 'fa fa-star checked'
+        document.getElementById("rl3").className = 'fa fa-star checked'
+        document.getElementById("rl4").className = 'fa fa-star checked'
+        document.getElementById("rl5").className = 'fa fa-star checked'
+    }
+    document.getElementById("rl4").onclick = function () {
+        document.getElementById("rl1").className = 'fa fa-star checked'
+        document.getElementById("rl2").className = 'fa fa-star checked'
+        document.getElementById("rl3").className = 'fa fa-star checked'
+        document.getElementById("rl4").className = 'fa fa-star checked'
+        document.getElementById("rl5").className = 'fa fa-star'
+    }
+    document.getElementById("rl3").onclick = function () {
+        document.getElementById("rl1").className = 'fa fa-star checked'
+        document.getElementById("rl2").className = 'fa fa-star checked'
+        document.getElementById("rl3").className = 'fa fa-star checked'
+        document.getElementById("rl4").className = 'fa fa-star'
+        document.getElementById("rl5").className = 'fa fa-star'
+    }
+    document.getElementById("rl2").onclick = function () {
+        document.getElementById("rl1").className = 'fa fa-star checked'
+        document.getElementById("rl2").className = 'fa fa-star checked'
+        document.getElementById("rl3").className = 'fa fa-star'
+        document.getElementById("rl4").className = 'fa fa-star'
+        document.getElementById("rl5").className = 'fa fa-star'
+    }
+    document.getElementById("rl1").onclick = function () {
+        document.getElementById("rl1").className = 'fa fa-star checked'
+        document.getElementById("rl2").className = 'fa fa-star'
+        document.getElementById("rl3").className = 'fa fa-star'
+        document.getElementById("rl4").className = 'fa fa-star'
+        document.getElementById("rl5").className = 'fa fa-star'
+    }
+
+
 });
