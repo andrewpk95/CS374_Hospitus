@@ -1,4 +1,35 @@
 $( document ).ready(function() {
+  // Booking Page javascript code
+  var hospitalKey = "-Le_qNjULv02Sl7YPp1V";
+  firebase.database().ref("Rooms").child(hospitalKey).child("Types").once("value", function (snapshot) {
+    snapshot.forEach(function (child) {
+      $("#room").append("<option>" + child.key + "</option>");
+    });
+  });
+  dialog = $( "#dialog-form" ).dialog({
+    autoOpen: false,
+    height: 400,
+    width: 350,
+    modal: true,
+    buttons: {
+      "Book a Room": bookRoom,
+      Cancel: function() {
+        dialog.dialog( "close" );
+      }
+    },
+    close: function() {
+      form[0].reset();
+    }
+  });
+  form = dialog.find( "form" ).on( "submit", function( event ) {
+    event.preventDefault();
+    bookRoom();
+  });
+  $( "#create-user" ).button().on( "click", function() {
+    dialog.dialog( "open" );
+  });
+  // Booking Page javascript code
+
   /*
   var hospital = {
     Name: "Maeil Hospital",
@@ -29,7 +60,7 @@ $( document ).ready(function() {
       }
     }
   };
-  */
+  
   var hospitalKey = "-Le_xKHpMMihSWMMsRyg";
   var reviews = {
     Comment: "Never coming back here. ",
@@ -42,10 +73,21 @@ $( document ).ready(function() {
     }
   };
   firebase.database().ref("Reviews").child(hospitalKey).push(reviews);
-  /*
+  
   firebase.database().ref("Hospitals").push(hospital).then(function (snapshot) {
     firebase.database().ref("Rooms").child(snapshot.key).set(room);
     firebase.database().ref("Reviews").child(snapshot.key).push(reviews);
   });
   */
 });
+
+// Booking Page javascript code
+function bookRoom() {
+  var name = $( "#name" ).val();
+  var email = $( "#email" ).val();
+  var phoneNumber = $( "#phone-number" ).val();
+  var roomType = $("#room option:selected").val();
+  alert("Booking Complete!\n" + "Name: " + name + "\nEmail: " + email + "\nPhone Number: " + phoneNumber + "\nRoom Type: " + roomType);
+  dialog.dialog( "close" );
+}
+// Booking Page javascript code
