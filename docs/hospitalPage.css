@@ -7,7 +7,14 @@ body {
 }
 
 .info{
-    background-color: #C0C0C0;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2em;
+    background: #eee;
+}
+
+.si{
+    line-height: 1.8em;
 }
 
 .checked {

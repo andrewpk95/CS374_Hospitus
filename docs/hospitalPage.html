@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Hospital Page</title>
+    <title>Review Page</title>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
     <link href="./hospitalPage.css" rel="stylesheet" />
 </head>
 <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+
     <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -18,7 +26,7 @@
     projectId: "cs374-hospitus-database",
     storageBucket: "cs374-hospitus-database.appspot.com",
     messagingSenderId: "31232394715",
-    appId: "1:31232394715:web:b5306dfaaa9ff6b2"
+    appId: "1:31232394715:web:a75465196a07c122"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -26,58 +34,20 @@
     <!--Your HTML here-->
     <script src="jquery/js/jquery-1.9.0.min.js"></script>
     <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
     <script src="./hospitalPage.js"></script>
-    <a href="searchPage.html">
-        <input class="backButton" type="button" value="Back to Search Results" />
-    </a>
-    <div>
-        <h1>Sumsang Hospital</h1>
-        <div style="float: left; width: 20%">
-            <img style="max-width: 100%" src="sumsang.jpg" /><br>
-            <a href="conveniences.html"><input type="button" value="Nearby Conveniences" /></a> <br>
-        </div>
-        <div style="float: left">
-            <p style="font-size:20px">
-                <b> Address: </b> 1516 Yuseong, Daejeon <br>
-                <b> Speciality: </b> Back Injury <br>
-                <b> Equipment: </b> X-Ray, CT/PET, MRI, Manual Therapy <br>
-                <b> Accomodation: </b> 16/20 available <br>
-                <b> Rooms Available: </b> Quadruples(2 left), Doubles(2 left) <br>
+    <h1 id="hospital_name"></h1>
+    <div class="info">
+        <div><img style="max-width: 100%" src="sumsang.jpg" /></div>
+        <div>
+            <p class="si">
+                <b> Address: </b> <span id="address"></span> <br>
+                <b> Speciality: </b><span id="specialty"></span> <br>
+                <b> Equipment: </b><span id="equipment"></span><br>
+                <b> Facilities: </b><span id="facilities"></span><br>
+                <b> Accomodation: </b><span id="accomodation"></span><br>
+                <b> Rooms Available: </b><span id="rooms"></span><br>
             </p>
-        </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <h2>
-            Overall Rating: <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span> (4.8)
-        </h2>
-        <h3>
-            Service: <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span> (4.4)
-        </h3>
-        <h3>
-            Food: <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span> (4.9)
-        </h3>
-        <h3>
-            Hygiene: <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span> (4.8)
-        </h3>
-        <h3>
-            Location: <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span> (4.0)
-        </h3>
+        </div>
     </div>
-    <h1>Reviews:</h1>
 </body>
 </html>
