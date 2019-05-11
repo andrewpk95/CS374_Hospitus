@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Hospitus</title>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link href="./admin.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--Your HTML here-->
+    <script src="jquery/js/jquery-1.9.0.min.js"></script>
+    <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+    <script src="./admin.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyD-e_P1cNEw6FQCOtKE6hm4i1plJb3KV9Y",
+          authDomain: "cs374-hospitus-database.firebaseapp.com",
+          databaseURL: "https://cs374-hospitus-database.firebaseio.com",
+          projectId: "cs374-hospitus-database",
+          storageBucket: "cs374-hospitus-database.appspot.com",
+          messagingSenderId: "31232394715",
+          appId: "1:31232394715:web:9d8674069e8fbda7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+    <header>
+      <a href="index.html"><img class="hospitus-logo" src="img/Hospitus_Logo.png"></a>
+    </header>
+    
+    <main>
+      <section>
+        <form>
+          <fieldset>
+            <legend>Add New Hospital</legend>
+            Name: <br>
+            <input type="text" name="Name"><br>
+            Address:<br>
+            <input type="text" name="Address"><br>
+            Equipments:<br>
+            <input type="text" name="Equipments"><br>
+            <br><input type="button" value="Add">
+          </fieldset>
+        </form>
+        
+      </section>
+    </main>
+  </body>
+</html>
