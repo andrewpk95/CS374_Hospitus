@@ -1,6 +1,33 @@
-
+var hk = "-Le_qNjULv02Sl7YPp1V";
 $(document).ready(function () {
-    var hk = "-Le_qNjULv02Sl7YPp1V";
+    firebase.database().ref("Rooms").child(hk).child("Types").once("value", function (snapshot) {
+        snapshot.forEach(function (child) {
+            $("#room").append("<option>" + child.key + "</option>");
+        });
+    });
+    dialog = $("#dialog-form").dialog({
+        autoOpen: false,
+        height: 400,
+        width: 350,
+        modal: true,
+        buttons: {
+            "Book a Room": bookRoom,
+            Cancel: function () {
+                dialog.dialog("close");
+            }
+        },
+        close: function () {
+            form[0].reset();
+        }
+    });
+    form = dialog.find("form").on("submit", function (event) {
+        event.preventDefault();
+        bookRoom();
+    });
+    $("#create-user").button().on("click", function () {
+        dialog.dialog("open");
+    });
+    // Booking Page javascript code
     var hs = firebase.database().ref("/Hospitals");
     var hr = firebase.database().ref("/Rooms");
     var hc = firebase.database().ref("/Reviews");
@@ -636,4 +663,47 @@ $(document).ready(function () {
             }
         })
     })
+
+    function bookRoom() {
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var phoneNumber = $("#phone-number").val();
+        var roomType = $("#room option:selected").val();
+        alert("Booking Complete!\n" + "Name: " + name + "\nEmail: " + email + "\nPhone Number: " + phoneNumber + "\nRoom Type: " + roomType);
+        dialog.dialog("close");
+        fc = firebase.database().ref("/Rooms")
+        fc.once('value', function (snapshot) {
+            var temp = snapshot.child(hk).child("Available").val()
+            temp = temp - 1
+            fc.child(hk).child("Available").set(temp)
+        })
+        fc.once('value', function (snapshot) {
+            var temp = snapshot.child(hk).child("Types").child(roomType).child("Available").val()
+            temp = temp - 1
+            fc.child(hk).child("Types").child(roomType).child("Available").set(temp)
+        }).then(function () {
+            hr.once('value', function (snapshot) {
+                var havailable = snapshot.child(hk).child("Available").val();
+                var htotal = snapshot.child(hk).child("Total").val();
+                var haccomodation = havailable + "/" + htotal;
+                document.getElementById("accomodation").innerHTML = haccomodation;
+            })
+            var room_list = [];
+            hr.once('value', function (snapshot) {
+                snapshot.child(hk).child("Types").forEach(function (ss1) {
+                    var temp_list = [];
+                    temp_list.push(ss1.key);
+                    temp_list.push(ss1.val());
+                    room_list.push(temp_list);
+                })
+                var hrooms = ""
+                room_list.forEach(function (entry) {
+                    hrooms = hrooms + entry[0] + ": " + entry[1].Available + "/" + entry[1].Total + " available, "
+                })
+                hrooms = hrooms.substring(0, hrooms.length - 2);
+                document.getElementById("rooms").innerHTML = hrooms;
+            })
+        })
+
+    }
 });

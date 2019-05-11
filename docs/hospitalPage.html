@@ -52,7 +52,23 @@
                 <b> Accomodation: </b><span id="accomodation"></span><br>
                 <b> Rooms Available: </b><span id="rooms"></span><br>
             </p>
-            <input style="float:right" type="button" value="Book a Room" />
+            <input style="float:right" id="create-user" type="button" value="Book a Room" />
+            <div id="dialog-form" title="Book a Room">
+                <p class="validateTips">All form fields are required.</p>
+                <form>
+                    <fieldset>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
+                        <label for="phone-number">Phone</label>
+                        <input type="text" name="phone-number" id="phone-number" value="" class="text ui-widget-content ui-corner-all">
+                        <label for="room">Select Your Room</label>
+                        <select name="room" id="room"></select>
+                        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </div>
     <div class="rating">
