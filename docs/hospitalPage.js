@@ -16,11 +16,19 @@ $(document).ready(function () {
         document.getElementById("address").innerHTML = haddress;
     })
     hs.once('value', function (snapshot) {
-        var hequipment = snapshot.child(hk).child("Equipments").val();
+        var hequipment = ""
+        snapshot.child(hk).child("Equipments").forEach(function (ss1) {
+            hequipment = hequipment + ss1.val() + ", "
+        })
+        hequipment = hequipment.substring(0, hequipment.length - 2);
         document.getElementById("equipment").innerHTML = hequipment;
     })
     hs.once('value', function (snapshot) {
-        var hfacilities = snapshot.child(hk).child("Facilities").val();
+        var hfacilities = ""
+        snapshot.child(hk).child("Facilities").forEach(function (ss1) {
+            hfacilities = hfacilities + ss1.val() + ", "
+        })
+        hfacilities = hfacilities.substring(0, hfacilities.length - 2)
         document.getElementById("facilities").innerHTML = hfacilities;
     })
     hs.once('value', function (snapshot) {
