@@ -1,3 +1,40 @@
+@media (min-width: 300px) {
+    main {
+        column-count: 2;
+        column-gap: 20px;
+    }
+    
+    section {
+        break-inside: avoid;
+    }
+}
+
 body {
     background-color: #eee;
+}
+
+header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: black;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+section {
+    min-width: 200px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.injury {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
 }
