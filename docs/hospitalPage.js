@@ -53,7 +53,6 @@ $(document).ready(function () {
             temp_list.push(ss1.val());
             room_list.push(temp_list);
         })
-        console.log(room_list)
         var hrooms = ""
         room_list.forEach(function (entry) {
             hrooms = hrooms + entry[0] + ": " + entry[1].Available + "/" + entry[1].Total + " available, "
@@ -61,4 +60,223 @@ $(document).ready(function () {
         hrooms = hrooms.substring(0, hrooms.length - 2);
         document.getElementById("rooms").innerHTML = hrooms;
     })
+    hs.child(hk).child("Rating").once('value', function (snapshot) {
+        var ro = snapshot.child("Overall").val()
+        var rh = snapshot.child("Hygiene").val()
+        var rs = snapshot.child("Service").val()
+        var rf = snapshot.child("Food").val()
+        var rl = snapshot.child("Location").val()
+        if (ro <= 5 && ro >= 4.5) {
+            document.getElementById("o1").className = 'fa fa-star checked'
+            document.getElementById("o2").className = 'fa fa-star checked'
+            document.getElementById("o3").className = 'fa fa-star checked'
+            document.getElementById("o4").className = 'fa fa-star checked'
+            document.getElementById("o5").className = 'fa fa-star checked'
+        }
+        else if (ro < 4.5 && ro >= 3.5) {
+            document.getElementById("o1").className = 'fa fa-star checked'
+            document.getElementById("o2").className = 'fa fa-star checked'
+            document.getElementById("o3").className = 'fa fa-star checked'
+            document.getElementById("o4").className = 'fa fa-star checked'
+            document.getElementById("o5").className = 'fa fa-star'
+        }
+        else if (ro < 3.5 && ro >= 2.5) {
+            document.getElementById("o1").className = 'fa fa-star checked'
+            document.getElementById("o2").className = 'fa fa-star checked'
+            document.getElementById("o3").className = 'fa fa-star checked'
+            document.getElementById("o4").className = 'fa fa-star'
+            document.getElementById("o5").className = 'fa fa-star'
+        }
+        else if (ro < 2.5 && ro >= 1.5) {
+            document.getElementById("o1").className = 'fa fa-star checked'
+            document.getElementById("o2").className = 'fa fa-star checked'
+            document.getElementById("o3").className = 'fa fa-star'
+            document.getElementById("o4").className = 'fa fa-star'
+            document.getElementById("o5").className = 'fa fa-star'
+        }
+        else if (ro < 1.5 && ro >= 0.5) {
+            document.getElementById("o1").className = 'fa fa-star checked'
+            document.getElementById("o2").className = 'fa fa-star'
+            document.getElementById("o3").className = 'fa fa-star'
+            document.getElementById("o4").className = 'fa fa-star'
+            document.getElementById("o5").className = 'fa fa-star'
+        }
+        else {
+            document.getElementById("o1").className = 'fa fa-star'
+            document.getElementById("o2").className = 'fa fa-star'
+            document.getElementById("o3").className = 'fa fa-star'
+            document.getElementById("o4").className = 'fa fa-star'
+            document.getElementById("o5").className = 'fa fa-star'
+        }
+
+        if (rh <= 5 && rh >= 4.5) {
+            document.getElementById("h1").className = 'fa fa-star checked'
+            document.getElementById("h2").className = 'fa fa-star checked'
+            document.getElementById("h3").className = 'fa fa-star checked'
+            document.getElementById("h4").className = 'fa fa-star checked'
+            document.getElementById("h5").className = 'fa fa-star checked'
+        }
+        else if (rh < 4.5 && rh >= 3.5) {
+            document.getElementById("h1").className = 'fa fa-star checked'
+            document.getElementById("h2").className = 'fa fa-star checked'
+            document.getElementById("h3").className = 'fa fa-star checked'
+            document.getElementById("h4").className = 'fa fa-star checked'
+            document.getElementById("h5").className = 'fa fa-star'
+        }
+        else if (rh < 3.5 && rh >= 2.5) {
+            document.getElementById("h1").className = 'fa fa-star checked'
+            document.getElementById("h2").className = 'fa fa-star checked'
+            document.getElementById("h3").className = 'fa fa-star checked'
+            document.getElementById("h4").className = 'fa fa-star'
+            document.getElementById("h5").className = 'fa fa-star'
+        }
+        else if (rh < 2.5 && rh >= 1.5) {
+            document.getElementById("h1").className = 'fa fa-star checked'
+            document.getElementById("h2").className = 'fa fa-star checked'
+            document.getElementById("h3").className = 'fa fa-star'
+            document.getElementById("h4").className = 'fa fa-star'
+            document.getElementById("h5").className = 'fa fa-star'
+        }
+        else if (rh < 1.5 && rh >= 0.5) {
+            document.getElementById("h1").className = 'fa fa-star checked'
+            document.getElementById("h2").className = 'fa fa-star'
+            document.getElementById("h3").className = 'fa fa-star'
+            document.getElementById("h4").className = 'fa fa-star'
+            document.getElementById("h5").className = 'fa fa-star'
+        }
+        else {
+            document.getElementById("h1").className = 'fa fa-star'
+            document.getElementById("h2").className = 'fa fa-star'
+            document.getElementById("h3").className = 'fa fa-star'
+            document.getElementById("h4").className = 'fa fa-star'
+            document.getElementById("h5").className = 'fa fa-star'
+        }
+        if (rs <= 5 && rs >= 4.5) {
+            document.getElementById("s1").className = 'fa fa-star checked'
+            document.getElementById("s2").className = 'fa fa-star checked'
+            document.getElementById("s3").className = 'fa fa-star checked'
+            document.getElementById("s4").className = 'fa fa-star checked'
+            document.getElementById("s5").className = 'fa fa-star checked'
+        }
+        else if (rs < 4.5 && rs >= 3.5) {
+            document.getElementById("s1").className = 'fa fa-star checked'
+            document.getElementById("s2").className = 'fa fa-star checked'
+            document.getElementById("s3").className = 'fa fa-star checked'
+            document.getElementById("s4").className = 'fa fa-star checked'
+            document.getElementById("s5").className = 'fa fa-star'
+        }
+        else if (rs < 3.5 && rs >= 2.5) {
+            document.getElementById("s1").className = 'fa fa-star checked'
+            document.getElementById("s2").className = 'fa fa-star checked'
+            document.getElementById("s3").className = 'fa fa-star checked'
+            document.getElementById("s4").className = 'fa fa-star'
+            document.getElementById("s5").className = 'fa fa-star'
+        }
+        else if (rs < 2.5 && rs >= 1.5) {
+            document.getElementById("s1").className = 'fa fa-star checked'
+            document.getElementById("s2").className = 'fa fa-star checked'
+            document.getElementById("s3").className = 'fa fa-star'
+            document.getElementById("s4").className = 'fa fa-star'
+            document.getElementById("s5").className = 'fa fa-star'
+        }
+        else if (rs < 1.5 && rs >= 0.5) {
+            document.getElementById("s1").className = 'fa fa-star checked'
+            document.getElementById("s2").className = 'fa fa-star'
+            document.getElementById("s3").className = 'fa fa-star'
+            document.getElementById("s4").className = 'fa fa-star'
+            document.getElementById("s5").className = 'fa fa-star'
+        }
+        else {
+            document.getElementById("s1").className = 'fa fa-star'
+            document.getElementById("s2").className = 'fa fa-star'
+            document.getElementById("s3").className = 'fa fa-star'
+            document.getElementById("s4").className = 'fa fa-star'
+            document.getElementById("s5").className = 'fa fa-star'
+        }
+        if (rf <= 5 && rf >= 4.5) {
+            document.getElementById("f1").className = 'fa fa-star checked'
+            document.getElementById("f2").className = 'fa fa-star checked'
+            document.getElementById("f3").className = 'fa fa-star checked'
+            document.getElementById("f4").className = 'fa fa-star checked'
+            document.getElementById("f5").className = 'fa fa-star checked'
+        }
+        else if (rf < 4.5 && rf >= 3.5) {
+            document.getElementById("f1").className = 'fa fa-star checked'
+            document.getElementById("f2").className = 'fa fa-star checked'
+            document.getElementById("f3").className = 'fa fa-star checked'
+            document.getElementById("f4").className = 'fa fa-star checked'
+            document.getElementById("f5").className = 'fa fa-star'
+        }
+        else if (rf < 3.5 && rf >= 2.5) {
+            document.getElementById("f1").className = 'fa fa-star checked'
+            document.getElementById("f2").className = 'fa fa-star checked'
+            document.getElementById("f3").className = 'fa fa-star checked'
+            document.getElementById("f4").className = 'fa fa-star'
+            document.getElementById("f5").className = 'fa fa-star'
+        }
+        else if (rf < 2.5 && rf >= 1.5) {
+            document.getElementById("f1").className = 'fa fa-star checked'
+            document.getElementById("f2").className = 'fa fa-star checked'
+            document.getElementById("f3").className = 'fa fa-star'
+            document.getElementById("f4").className = 'fa fa-star'
+            document.getElementById("f5").className = 'fa fa-star'
+        }
+        else if (rf < 1.5 && rf >= 0.5) {
+            document.getElementById("f1").className = 'fa fa-star checked'
+            document.getElementById("f2").className = 'fa fa-star'
+            document.getElementById("f3").className = 'fa fa-star'
+            document.getElementById("f4").className = 'fa fa-star'
+            document.getElementById("f5").className = 'fa fa-star'
+        }
+        else {
+            document.getElementById("f1").className = 'fa fa-star'
+            document.getElementById("f2").className = 'fa fa-star'
+            document.getElementById("f3").className = 'fa fa-star'
+            document.getElementById("f4").className = 'fa fa-star'
+            document.getElementById("f5").className = 'fa fa-star'
+        }
+        if (rl <= 5 && rl >= 4.5) {
+            document.getElementById("l1").className = 'fa fa-star checked'
+            document.getElementById("l2").className = 'fa fa-star checked'
+            document.getElementById("l3").className = 'fa fa-star checked'
+            document.getElementById("l4").className = 'fa fa-star checked'
+            document.getElementById("l5").className = 'fa fa-star checked'
+        }
+        else if (rl < 4.5 && rl >= 3.5) {
+            document.getElementById("l1").className = 'fa fa-star checked'
+            document.getElementById("l2").className = 'fa fa-star checked'
+            document.getElementById("l3").className = 'fa fa-star checked'
+            document.getElementById("l4").className = 'fa fa-star checked'
+            document.getElementById("l5").className = 'fa fa-star'
+        }
+        else if (rl < 3.5 && rl >= 2.5) {
+            document.getElementById("l1").className = 'fa fa-star checked'
+            document.getElementById("l2").className = 'fa fa-star checked'
+            document.getElementById("l3").className = 'fa fa-star checked'
+            document.getElementById("l4").className = 'fa fa-star'
+            document.getElementById("l5").className = 'fa fa-star'
+        }
+        else if (rl < 2.5 && rl >= 1.5) {
+            document.getElementById("l1").className = 'fa fa-star checked'
+            document.getElementById("l2").className = 'fa fa-star checked'
+            document.getElementById("l3").className = 'fa fa-star'
+            document.getElementById("l4").className = 'fa fa-star'
+            document.getElementById("l5").className = 'fa fa-star'
+        }
+        else if (rl < 1.5 && rl >= 0.5) {
+            document.getElementById("l1").className = 'fa fa-star checked'
+            document.getElementById("l2").className = 'fa fa-star'
+            document.getElementById("l3").className = 'fa fa-star'
+            document.getElementById("l4").className = 'fa fa-star'
+            document.getElementById("l5").className = 'fa fa-star'
+        }
+        else {
+            document.getElementById("l1").className = 'fa fa-star'
+            document.getElementById("l2").className = 'fa fa-star'
+            document.getElementById("l3").className = 'fa fa-star'
+            document.getElementById("l4").className = 'fa fa-star'
+            document.getElementById("l5").className = 'fa fa-star'
+        }
+    })
+
 });
