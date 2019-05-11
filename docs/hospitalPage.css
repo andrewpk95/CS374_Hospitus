@@ -18,12 +18,23 @@ body {
 }
 
 .checked {
-    color: red;
+    color: yellow;
+}
+
+.reviews{
+    display:grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-gap: 1em;
 }
 
 .rating {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 1em;
-    background: #eee;
+    background: #ccc;
+}
+
+.makeReview{
+    width: 300px;
+    height: 100px;
 }
