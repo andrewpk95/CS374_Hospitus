@@ -14,9 +14,43 @@
     <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
     <script src="./index.js"></script>
-    <h1 class="title">Hospitus</h1>
-    <div>Select Your Injury: </div>
-    <input id="injury_input" type=text name=answer size=20 placeholder="Your Injury Here" autofocus>
-    <a href="searchPage.html"><input type="button" value="Search!"></a>
+    <header>
+      <a href="index.html"><img class="hospitus-logo" src="img/Hospitus_Logo.png"></a>
+    </header>
+    <h1>Select Your Injury: </h1>
+    <main>
+      <div>
+        <section>
+          <a href="searchPage.html?injury=head">
+            <img class="injury" id="head" src="img/injury/head.png">
+          </a>
+        </section>
+        <section>
+          <a href="searchPage.html?injury=arm">
+            <img class="injury" src="img/injury/arm.png">
+          </a>
+        </section>
+        <section>
+          <a href="searchPage.html?injury=broken-bone">
+            <img class="injury" src="img/injury/brokenbone.png">
+          </a>
+        </section>
+        <section>
+          <a href="searchPage.html?injury=lung-collapse">
+            <img class="injury" src="img/injury/lungcollapse.png">
+          </a>
+        </section>
+        <section>
+          <a href="searchPage.html?injury=leg">
+            <img class="injury" src="img/injury/leg.png">
+          </a>
+        </section>
+        <section>
+          <a href="searchPage.html?injury=spine">
+            <img class="injury" src="img/injury/spine.png">
+          </a>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
