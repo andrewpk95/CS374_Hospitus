@@ -556,7 +556,7 @@ $(document).ready(function () {
 
         var str = document.getElementById("makeReview").value
         hc.child(hk).push({
-            Commment: str,
+            Comment: str,
             Rating:
                 {
                     Food: rf,
@@ -592,29 +592,47 @@ $(document).ready(function () {
         document.getElementById("rl3").className = 'fa fa-star'
         document.getElementById("rl4").className = 'fa fa-star'
         document.getElementById("rl5").className = 'fa fa-star'
-
+        $('#or').append("<div style=\"border-left: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + str + "</div>")
+        if (ro >= 4.5) {
+            $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span></div>")
+        }
+        else if (ro < 4.5 && ro >= 3.5) {
+            $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span></div>")
+        }
+        else if (ro < 3.5 && ro >= 2.5) {
+            $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
+        }
+        else if (ro < 2.5 && ro >= 1.5) {
+            $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
+        }
+        else if (ro < 1.5 && ro >= 0.5) {
+            $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
+        }
+        else {
+            $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
+        }
     }
     hc.once('value', function (snapshot) {
         snapshot.child(hk).forEach(function (ss1) {
-            $('#or').append("<div>" + ss1.child("Comment").val() + "</div>")
+            $('#or').append("<div style=\"border-left: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + ss1.child("Comment").val() + "</div>")
             var star = ss1.child("Rating").child("Overall").val()
             if (star >= 4.5) {
-                $('#or').append("<div>" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span></div>")
+                $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span></div>")
             }
             else if (star < 4.5 && star >= 3.5) {
-                $('#or').append("<div>" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span></div>")
+                $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span></div>")
             }
             else if (star < 3.5 && star >= 2.5) {
-                $('#or').append("<div>" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
+                $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
             }
             else if (star < 2.5 && star >= 1.5) {
-                $('#or').append("<div>" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
+                $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
             }
             else if (star < 1.5 && star >= 0.5) {
-                $('#or').append("<div>" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
+                $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
             }
             else {
-                $('#or').append("<div>" + "<span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
+                $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
             }
         })
     })

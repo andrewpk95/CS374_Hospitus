@@ -45,10 +45,10 @@ body {
     height: 100px;
 }
 
-.otherReviews{
-    display:grid;
+.otherReviews {
+    display: grid;
     grid-template-columns: 2.5fr 1fr;
-    grid-row-gap: 2em;
     background: #ccc;
-    border: 2px solid #ffa94d;
+    padding: 10px;
+    border: 2px solid #eee;
 }
