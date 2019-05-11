@@ -32,6 +32,10 @@ $(document).ready(function () {
         document.getElementById("facilities").innerHTML = hfacilities;
     })
     hs.once('value', function (snapshot) {
+        var hdistance = snapshot.child(hk).child("Distance").val();
+        document.getElementById("distance").innerHTML = hdistance;
+    })
+    hs.once('value', function (snapshot) {
         var hspecialty = snapshot.child(hk).child("Specialty").val();
         document.getElementById("specialty").innerHTML = hspecialty;
     })
