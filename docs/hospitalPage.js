@@ -2,7 +2,8 @@
 $(document).ready(function () {
     var hk = "-Le_qNjULv02Sl7YPp1V";
     var hs = firebase.database().ref("/Hospitals");
-    var hr = firebase.database().ref("/Rooms")
+    var hr = firebase.database().ref("/Rooms");
+    var hc = firebase.database().ref("/Reviews");
     hs.once('value', function (snapshot) {
         var hname = snapshot.child(hk).child("Name").val();
         document.getElementById("hospital_name").innerHTML = hname;
@@ -454,6 +455,167 @@ $(document).ready(function () {
         document.getElementById("rl4").className = 'fa fa-star'
         document.getElementById("rl5").className = 'fa fa-star'
     }
+    document.getElementById("submit").onclick = function () {
+        var ro
+        var rh
+        var rs
+        var rf
+        var rl
+        if (document.getElementById("ro5").className === 'fa fa-star checked') {
+            ro = 5
+        }
+        else if (document.getElementById("ro4").className === 'fa fa-star checked') {
+            ro = 4
+        }
+        else if (document.getElementById("ro3").className === 'fa fa-star checked') {
+            ro = 3
+        }
+        else if (document.getElementById("ro2").className === 'fa fa-star checked') {
+            ro = 2
+        }
+        else if (document.getElementById("ro1").className === 'fa fa-star checked') {
+            ro = 1
+        }
+        else {
+            ro = 0
+        }
+        if (document.getElementById("rh5").className === 'fa fa-star checked') {
+            rh = 5
+        }
+        else if (document.getElementById("rh4").className === 'fa fa-star checked') {
+            rh = 4
+        }
+        else if (document.getElementById("rh3").className === 'fa fa-star checked') {
+            rh = 3
+        }
+        else if (document.getElementById("rh2").className === 'fa fa-star checked') {
+            rh = 2
+        }
+        else if (document.getElementById("rh1").className === 'fa fa-star checked') {
+            rh = 1
+        }
+        else {
+            rh = 0
+        }
+        if (document.getElementById("rs5").className === 'fa fa-star checked') {
+            rs = 5
+        }
+        else if (document.getElementById("rs4").className === 'fa fa-star checked') {
+            rs = 4
+        }
+        else if (document.getElementById("rs3").className === 'fa fa-star checked') {
+            rs = 3
+        }
+        else if (document.getElementById("rs2").className === 'fa fa-star checked') {
+            rs = 2
+        }
+        else if (document.getElementById("rs1").className === 'fa fa-star checked') {
+            rs = 1
+        }
+        else {
+            rs = 0
+        }
+        if (document.getElementById("rf5").className === 'fa fa-star checked') {
+            rf = 5
+        }
+        else if (document.getElementById("rf4").className === 'fa fa-star checked') {
+            rf = 4
+        }
+        else if (document.getElementById("rf3").className === 'fa fa-star checked') {
+            rf = 3
+        }
+        else if (document.getElementById("rf2").className === 'fa fa-star checked') {
+            rf = 2
+        }
+        else if (document.getElementById("rf1").className === 'fa fa-star checked') {
+            rf = 1
+        }
+        else {
+            rf = 0
+        }
+        if (document.getElementById("rl5").className === 'fa fa-star checked') {
+            rl = 5
+        }
+        else if (document.getElementById("rl4").className === 'fa fa-star checked') {
+            rl = 4
+        }
+        else if (document.getElementById("rl3").className === 'fa fa-star checked') {
+            rl = 3
+        }
+        else if (document.getElementById("rl2").className === 'fa fa-star checked') {
+            rl = 2
+        }
+        else if (document.getElementById("rl1").className === 'fa fa-star checked') {
+            rl = 1
+        }
+        else {
+            rl = 0
+        }
 
 
+
+        var str = document.getElementById("makeReview").value
+        hc.child(hk).push({
+            Commment: str,
+            Rating:
+                {
+                    Food: rf,
+                    Hygiene: rh,
+                    Location: rl,
+                    Overall: ro,
+                    Service: rs
+                }
+        })
+        document.getElementById("makeReview").value = ''
+        document.getElementById("ro1").className = 'fa fa-star'
+        document.getElementById("ro2").className = 'fa fa-star'
+        document.getElementById("ro3").className = 'fa fa-star'
+        document.getElementById("ro4").className = 'fa fa-star'
+        document.getElementById("ro5").className = 'fa fa-star'
+        document.getElementById("rh1").className = 'fa fa-star'
+        document.getElementById("rh2").className = 'fa fa-star'
+        document.getElementById("rh3").className = 'fa fa-star'
+        document.getElementById("rh4").className = 'fa fa-star'
+        document.getElementById("rh5").className = 'fa fa-star'
+        document.getElementById("rs1").className = 'fa fa-star'
+        document.getElementById("rs2").className = 'fa fa-star'
+        document.getElementById("rs3").className = 'fa fa-star'
+        document.getElementById("rs4").className = 'fa fa-star'
+        document.getElementById("rs4").className = 'fa fa-star'
+        document.getElementById("rf1").className = 'fa fa-star'
+        document.getElementById("rf2").className = 'fa fa-star'
+        document.getElementById("rf3").className = 'fa fa-star'
+        document.getElementById("rf5").className = 'fa fa-star'
+        document.getElementById("rf4").className = 'fa fa-star'
+        document.getElementById("rl1").className = 'fa fa-star'
+        document.getElementById("rl2").className = 'fa fa-star'
+        document.getElementById("rl3").className = 'fa fa-star'
+        document.getElementById("rl4").className = 'fa fa-star'
+        document.getElementById("rl5").className = 'fa fa-star'
+
+    }
+    hc.once('value', function (snapshot) {
+        snapshot.child(hk).forEach(function (ss1) {
+            $('#or').append("<div>" + ss1.child("Comment").val() + "</div>")
+            var star = ss1.child("Rating").child("Overall").val()
+            if (star >= 4.5) {
+                $('#or').append("<div>" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span></div>")
+            }
+            else if (star < 4.5 && star >= 3.5) {
+                $('#or').append("<div>" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span></div>")
+            }
+            else if (star < 3.5 && star >= 2.5) {
+                $('#or').append("<div>" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
+            }
+            else if (star < 2.5 && star >= 1.5) {
+                $('#or').append("<div>" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
+            }
+            else if (star < 1.5 && star >= 0.5) {
+                $('#or').append("<div>" + "<span class=\"fa fa-star checked\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
+            }
+            else {
+                $('#or').append("<div>" + "<span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
+            }
+        })
+    })
 });

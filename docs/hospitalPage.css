@@ -7,6 +7,7 @@ body {
 }
 
 .info{
+    border: 2px solid #ccc;
     display:grid;
     grid-template-columns: 1fr 4fr;
     grid-gap: 1em;
@@ -22,6 +23,7 @@ body {
 }
 
 .reviews{
+    border: 2px solid #ccc;
     display:grid;
     grid-template-columns: 2.5fr 1fr;
     grid-row-gap: 2em;
@@ -30,6 +32,7 @@ body {
 
 
 .rating {
+    border: 2px solid #eee;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 1em;
@@ -37,6 +40,15 @@ body {
 }
 
 .makeReview{
+    border: 2px solid #000000;
     width: 200px;
     height: 100px;
+}
+
+.otherReviews{
+    display:grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-row-gap: 2em;
+    background: #ccc;
+    border: 2px solid #ffa94d;
 }
