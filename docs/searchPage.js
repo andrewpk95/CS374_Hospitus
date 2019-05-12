@@ -7,7 +7,10 @@ $(document).ready(function() {
 	const hospitals = firebase.database().ref().child("Hospitals");
 
 	console.log(getURLParameters());
-	$("input[name='sort_category'][value='" + parameters.sortby + "']").attr("checked","checked");
+	if (parameters.sortby) {
+		console.log(parameters.sortby);
+		$("input[name='sort_category'][value='" + parameters.sortby + "']").attr("checked","checked");
+	}
 
 	//Make sorting radio buttons refresh the page just to make it look like
 	//the sorting function works. (Sorting not implemented yet)
