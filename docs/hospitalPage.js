@@ -672,7 +672,7 @@ $(document).ready(function () {
             }
         })
         document.getElementById("nc").onclick = function () {
-            window.location.href = "conveniences.html" + "?hopital-key=" + hk
+            window.location.href = "conveniences.html" + "?hospital-key=" + hk
         }
     })
 
