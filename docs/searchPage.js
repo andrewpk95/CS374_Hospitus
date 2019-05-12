@@ -24,8 +24,12 @@ hospitals.on("value", function(snapshot){
 
 			var t = node.Name.split(" ");
 
-			var hospital_name = document.createElement("a");
-			hospital_name.setAttribute("href","hospitalPage.html"+"#"+t[0]);
+			var hospital_name = document.createElement("p");
+			hospital_name.style.textDecoration = "underline";
+			hospital_name.style.fontSize = "15px";
+			hospital_name.onclick = function() {
+					window.location = "hospitalPage.html"+"#"+t[0];
+			}
 			hospital_name.innerHTML = node.Name;
 			left_div.appendChild(hospital_name);
 
@@ -37,7 +41,7 @@ hospitals.on("value", function(snapshot){
 			image.onclick = function() {
 				window.location = "hospitalPage.html"+"#"+t[0];
 			}
-			//image.setAttribute("href","hospitalPage.html"+"#"+t[0]);
+			
 			left_div.appendChild(image);
 
 			var address = document.createElement("p");
