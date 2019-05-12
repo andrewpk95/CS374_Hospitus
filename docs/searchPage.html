@@ -8,6 +8,10 @@
     <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
 
     <link href="./searchPage.css" rel="stylesheet" />
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+
+
   </head>
   <body>
     <!--Your HTML here-->
@@ -22,34 +26,46 @@
       <input type="radio" name="sort_category"> Food 
       <input type="radio" name="sort_category"> Location    
 
-      <div class="result">
-        <a href="hospitalPage.html">
-        <h3>Sumsang Hospital</h3>
-        <div style="float: left; width: 30% ">
-          <img src="sumsang.jpg">
-        </div>
-        </a>
-        <div>
+      <div id="results"></div>
 
-          <p style="float: left"> 
-            <b> Address: </b> 1516 Yuseong, Daejeon <br>
-            <b> Speciality: </b> Back Injury <br>
-            <b> Equipment: </b> X-Ray, CT/PET, MRI, Manual Therapy <br>
-            <b> Accomodation: </b> 16/20 available
-          </p> 
-          <br><br><br>
-          <div style="float: right">
-            (4.8)
-          </div>
-        </div>
-      </div> <br>
+      <div id="modal">
+        <iframe
+          id="myFrame"
+          width="200"
+          height="200"
+          maptype="roadmap"
+          frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCvRU1kubBR8WhgxQBXqcOLmhv-YaxOTbc&q=Singapore&language=en" 
+          allowfullscreen>
+        </iframe>
+      </div>
 
-      <a href="index.html"><input type="button" value="Go back" style="float: right; padding:"> </a>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+    // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyD-e_P1cNEw6FQCOtKE6hm4i1plJb3KV9Y",
+        authDomain: "cs374-hospitus-database.firebaseapp.com",
+        databaseURL: "https://cs374-hospitus-database.firebaseio.com",
+        projectId: "cs374-hospitus-database",
+        storageBucket: "cs374-hospitus-database.appspot.com",
+        messagingSenderId: "31232394715",
+        appId: "1:31232394715:web:d81bf9aeca01c0ea"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+  </script>
 
 
     <script src="jquery/js/jquery-1.9.0.min.js"></script>
     <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+    
     <script src="./searchPage.js"></script>
     
 
