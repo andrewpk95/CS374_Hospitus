@@ -1,16 +1,16 @@
-## Home Page
+## 1. Home Page
 Injuries are represented by images for fast and easy selection.
-## Search Page
+## 2. Search Page
 Hospitals are shown based on user selection from previous page.
 
 Hospitals are sorted based on their ratings.
-## Hospital Page
+## 3. Hospital Page
 Users can read and write review.
 
 More detailed ratings are shown.
 
 Users can also book rooms.
-## Conveniences Page
+## 4. Conveniences Page
 Detailed information about nearby conveniences is shown.
 
 They are marked on Google Map.
