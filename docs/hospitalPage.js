@@ -662,9 +662,9 @@ $(document).ready(function () {
                 $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
             }
         })
-        document.getElementById('nc').onclick(function () {
-            window.location.href = "conveniences.html" + "?hopital_key=" + hk
-        })
+        document.getElementById("nc").onclick = function () {
+            window.location.href = "conveniences.html" + "?hopital-key=" + hk
+        }
     })
 
     function bookRoom() {
