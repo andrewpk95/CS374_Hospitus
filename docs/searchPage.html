@@ -1,53 +1,56 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Search Result</title>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link href="./searchPage.css" rel="stylesheet" />
     <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
 
 
-  </head>
-  <body>
+</head>
+<body>
     <!--Your HTML here-->
 
     <h1 class="title">Search Results</h1>
-    Sort by: 
-    
-      <input type="radio" name="sort_category" value="Overall" checked> Overall
-      <input type="radio" name="sort_category" value="Accommodation" > Accommodation 
-      <input type="radio" name="sort_category" value="Hygiene" > Hygiene 
-      <input type="radio" name="sort_category" value="Service" > Service 
-      <input type="radio" name="sort_category" value="Food" > Food 
-      <input type="radio" name="sort_category" value="Location" > Location    
+    Sort by:
+    <header>
+        <div class="ui big menu">
+            <div class="header item">
+                <a class="item" href="/CS374_Hospitus/index.html">Hospitus</a>
+            </div>
+        </div>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <input type="radio" name="sort_category" value="Overall" checked> Overall
+    <input type="radio" name="sort_category" value="Accommodation"> Accommodation
+    <input type="radio" name="sort_category" value="Hygiene"> Hygiene
+    <input type="radio" name="sort_category" value="Service"> Service
+    <input type="radio" name="sort_category" value="Food"> Food
+    <input type="radio" name="sort_category" value="Location"> Location
 
-      <div id="results"></div>
+    <div id="results"></div>
 
-      <div id="modal">
-        <iframe
-          id="myFrame"
-          width="200"
-          height="200"
-          maptype="roadmap"
-          frameborder="0" style="border:0"
-          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCvRU1kubBR8WhgxQBXqcOLmhv-YaxOTbc&q=Singapore&language=en" 
-          allowfullscreen>
-        </iframe>
-      </div>
+    <div id="modal">
+        <iframe id="myFrame"
+                width="200"
+                height="200"
+                maptype="roadmap"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCvRU1kubBR8WhgxQBXqcOLmhv-YaxOTbc&q=Singapore&language=en"
+                allowfullscreen></iframe>
+    </div>
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
 
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
-
-  <script>
+    <script>
     // Your web app's Firebase configuration
       var firebaseConfig = {
         apiKey: "AIzaSyD-e_P1cNEw6FQCOtKE6hm4i1plJb3KV9Y",
@@ -60,14 +63,14 @@
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
-  </script>
+    </script>
 
 
     <script src="jquery/js/jquery-1.9.0.min.js"></script>
     <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
-    
-    <script src="./searchPage.js"></script>
-    
 
-  </body>
+    <script src="./searchPage.js"></script>
+
+
+</body>
 </html>
