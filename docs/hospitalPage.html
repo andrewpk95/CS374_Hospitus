@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Review Page</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
     <link href="./hospitalPage.css" rel="stylesheet" />
 </head>
 <body>
+    <header>
+        <div class="ui big menu">
+            <div class="header item">
+                <a class="item" href="/CS374_Hospitus/index.html">Hospitus</a>
+            </div>
+            <div class="right item">
+                <a class="item" href="/CS374_Hospitus/searchPage.html">Hospitals</a>
+            </div>
+        </div>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
@@ -39,7 +51,7 @@
     <h1 id="hospital_name"></h1>
     <div class="info">
         <div>
-            <img style="max-width: 100%" src="sumsang.jpg" /><br />
+            <img id="hi" style="max-width: 100%" src="sumsang.jpg" /><br />
             <input id="nc" type="button" value="Nearby Conveniences">
         </div>
         <div>
