@@ -1,4 +1,7 @@
-var hk = "-Le_qNjULv02Sl7YPp1V";
+var cl = window.location.href
+var clp = cl.split("=")
+
+var hk = clp[1]
 $(document).ready(function () {
     firebase.database().ref("Rooms").child(hk).child("Types").once("value", function (snapshot) {
         snapshot.forEach(function (child) {
