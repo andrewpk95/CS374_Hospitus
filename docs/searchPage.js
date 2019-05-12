@@ -28,7 +28,7 @@ hospitals.on("value", function(snapshot){
 			hospital_name.style.textDecoration = "underline";
 			hospital_name.style.fontSize = "15px";
 			hospital_name.onclick = function() {
-					window.location = "hospitalPage.html"+"#"+t[0];
+					window.location = "hospitalPage.html"+"?hospital-key="+childNodes.key;
 			}
 			hospital_name.innerHTML = node.Name;
 			left_div.appendChild(hospital_name);
@@ -39,7 +39,7 @@ hospitals.on("value", function(snapshot){
 			image.setAttribute("class","img");
 			image.style.padding = "5px";
 			image.onclick = function() {
-				window.location = "hospitalPage.html"+"#"+t[0];
+				window.location = "hospitalPage.html"+"?hospital-key="+childNodes.key;
 			}
 			
 			left_div.appendChild(image);
