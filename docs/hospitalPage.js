@@ -27,10 +27,16 @@ $(document).ready(function () {
     $("#create-user").button().on("click", function () {
         dialog.dialog("open");
     });
+
     // Booking Page javascript code
     var hs = firebase.database().ref("/Hospitals");
     var hr = firebase.database().ref("/Rooms");
     var hc = firebase.database().ref("/Reviews");
+
+    hs.once('value', function (snapshot) {
+        var himg = snapshot.child(hk).child("Image").val();
+        document.getElementById("hi").setAttribute("src", himg)
+    })
     hs.once('value', function (snapshot) {
         var hname = snapshot.child(hk).child("Name").val();
         document.getElementById("hospital_name").innerHTML = hname;
