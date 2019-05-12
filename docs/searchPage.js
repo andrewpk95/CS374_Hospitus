@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 	
 	//var specialty = window.location.hash.substring(1);
 	var parameters = getURLParameters();
@@ -100,7 +100,7 @@
 
 		})
 	})
-
+})
 
 
 function getURLParameters() {
