@@ -43,3 +43,7 @@ p {
 	padding: 10%;
 	width: 80%;
 }
+
+p {
+	line-height: 1.3;
+}

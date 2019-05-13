@@ -83,8 +83,20 @@ $(document).ready(function() {
 
 
 				var equipment = document.createElement("p");
-				equipment.innerHTML = "Equipment: " + node.Equipments;
+				equipment.innerHTML = node.Equipments;
+				equipment.innerHTML = equipment.innerHTML.substring(1);
+				equipment.innerHTML = "Equipment: "+ equipment.innerHTML;
 				right_div.appendChild(equipment);
+
+				var facilities = document.createElement("p");
+				facilities.innerHTML = node.Facilities;
+				facilities.innerHTML = facilities.innerHTML.substring(1);
+				facilities.innerHTML = "Facilities: "+facilities.innerHTML;
+				right_div.appendChild(facilities);
+
+				var distance = document.createElement("p");
+				distance.innerHTML = "Distance: "+ node.Distance;
+				right_div.appendChild(distance);
 
 				//var accommodation = document.createElement("p");
 				//accommodation.innerHTML = "Accommodation: "+ node.Rooms["Available"] + "/" + node.Rooms["Total"];
