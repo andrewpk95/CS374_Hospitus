@@ -1,19 +1,26 @@
 
-.result {
+/*.result {
 	padding: 5px;
 	background-color: #A9A9A9;
 	display: grid;
 	grid-template-columns: 40% 60%;
 
+}*/
+
+.result{
+    border: 2px solid #ccc;
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 1em;
+    background: #eee;
 }
 
-img {
-	width: 100px; 
-	height: 60px;
+.img {
+	max-width: 100%;
 }
 
 p {
-	font-size: 10px;
+	font-size: 16px;
 }
 
 .result >div {
@@ -40,7 +47,7 @@ p {
 
 #myFrame {
 	margin: auto;
-	padding: 10%;
+	margin-left: 10%;
 	width: 80%;
 }
 
