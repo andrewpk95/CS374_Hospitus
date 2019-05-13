@@ -4,13 +4,14 @@
 	background-color: #A9A9A9;
 	display: grid;
 	grid-template-columns: 40% 60%;
+	grid-template-columns: 1fr 4fr;
 
 }*/
 
 .result{
     border: 2px solid #ccc;
     display:grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 50% 50%;
     grid-gap: 1em;
     background: #eee;
 }
@@ -50,5 +51,5 @@
 }
 
 p {
-	line-height: 1.3;
+	
 }
