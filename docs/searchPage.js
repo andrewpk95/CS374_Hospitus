@@ -37,13 +37,14 @@ $(document).ready(function() {
 
 				var t = node.Name.split(" ");
 
-				var hospital_name = document.createElement("p");
+				var hospital_name = document.createElement("h3");
 				hospital_name.style.textDecoration = "underline";
-				hospital_name.style.fontSize = "15px";
+				
 				hospital_name.onclick = function() {
 						window.location = "hospitalPage.html"+"?hospital-key="+childNodes.key;
 				}
 				hospital_name.innerHTML = node.Name;
+				hospital_name.style.cursor = "pointer";
 				left_div.appendChild(hospital_name);
 
 				var image = document.createElement("img");
@@ -51,6 +52,7 @@ $(document).ready(function() {
 				image.setAttribute("src", "hospital_image/"+t[0]+".jpg");
 				image.setAttribute("class","img");
 				image.style.padding = "5px";
+				image.style.cursor = "pointer";
 				image.onclick = function() {
 					window.location = "hospitalPage.html"+"?hospital-key="+childNodes.key;
 				}
@@ -58,13 +60,18 @@ $(document).ready(function() {
 				left_div.appendChild(image);
 
 				var address = document.createElement("p");
-				address.innerHTML = "Address: " + node.Address+". ";
-				address.style.float = "left";
-				right_div.appendChild(address);
+				var b = document.createElement("b");
+				b.innerHTML = "Address: ";
+				address.appendChild(b);
+				address.innerHTML = address.innerHTML + node.Address+". ";
+				
 
-				var see_map = document.createElement("p");
-				see_map.innerHTML = "Show on map";
-				see_map.style.textDecoration = "underline";
+				var see_map = document.createElement("input");
+				//var see_map = document.createElement("p");
+				see_map.setAttribute("type","button");
+				see_map.setAttribute("value","Show on map");
+				//see_map.setAttribute("id","create-user");
+				
 				
 
 				var modal = document.getElementById("modal");
@@ -79,19 +86,39 @@ $(document).ready(function() {
 							modal.style.display = "none";
 						}
 				}
-				right_div.appendChild(see_map);
+				address.appendChild(see_map);
+				right_div.appendChild(address);
+				//right_div.appendChild(see_map);
 
 
 				var equipment = document.createElement("p");
-				equipment.innerHTML = "Equipment: " + node.Equipments;
+				var b = document.createElement("b");
+				b.innerHTML = "Equipment: ";
+				equipment.appendChild(b);
+				//equipment.innerHTML = node.Equipments;
+				//equipment.innerHTML = equipment.innerHTML.substring(1);
+				equipment.innerHTML = equipment.innerHTML+node.Equipments;
 				right_div.appendChild(equipment);
 
-				//var accommodation = document.createElement("p");
-				//accommodation.innerHTML = "Accommodation: "+ node.Rooms["Available"] + "/" + node.Rooms["Total"];
-				//right_div.appendChild(accommodation);
+				var facilities = document.createElement("p");
+				var b = document.createElement("b");
+				b.innerHTML = "Facilities: ";
+				facilities.appendChild(b);
+			//	facilities.innerHTML = node.Facilities;
+			//	facilities.innerHTML = facilities.innerHTML.substring(1);
+				facilities.innerHTML = facilities.innerHTML+node.Facilities;
+				right_div.appendChild(facilities);
 
-				var rating = document.createElement("p");
-				rating.innerHTML = "("+node.Rating.Overall+")";
+				var distance = document.createElement("p");
+				var b = document.createElement("b");
+				b.innerHTML = "Distance: ";
+				distance.appendChild(b);
+				distance.innerHTML = distance.innerHTML+ node.Distance;
+				right_div.appendChild(distance);
+
+
+				var rating = document.createElement("b");
+				rating.innerHTML = "Rating: " + node.Rating.Overall;
 				rating.style.float = "right";
 				right_div.appendChild(rating);
 
