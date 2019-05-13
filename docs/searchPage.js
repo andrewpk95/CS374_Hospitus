@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 				var t = node.Name.split(" ");
 
-				var hospital_name = document.createElement("h1");
+				var hospital_name = document.createElement("h3");
 				hospital_name.style.textDecoration = "underline";
 				
 				hospital_name.onclick = function() {
@@ -88,6 +88,7 @@ $(document).ready(function() {
 				}
 				address.appendChild(see_map);
 				right_div.appendChild(address);
+				//right_div.appendChild(see_map);
 
 
 				var equipment = document.createElement("p");
@@ -116,8 +117,8 @@ $(document).ready(function() {
 				right_div.appendChild(distance);
 
 
-				var rating = document.createElement("p");
-				rating.innerHTML = "("+node.Rating.Overall+")";
+				var rating = document.createElement("b");
+				rating.innerHTML = "Rating: " + node.Rating.Overall;
 				rating.style.float = "right";
 				right_div.appendChild(rating);
 
