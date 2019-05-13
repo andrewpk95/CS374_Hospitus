@@ -45,11 +45,8 @@
                         Store</button>
                 </div>
             </div>
-            <div class="conv-map">
-                <!-- TODO: use Google Maps Javascript API -->
-                <iframe id="google-map"frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDx6E2nPO3IM9vr93xKFW3XjEHuRyBwyPM
-                    &q=Hospital,Daejeon" allowfullscreen>
-                </iframe>
+            <div class="conv-map" id="js-map">
+                <div id="google-map"></div>
             </div>
         </main>
         <footer>CS374</footer>
@@ -58,6 +55,9 @@
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
     <script src="conveniences.js"></script>
+    <script 
+        async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDx6E2nPO3IM9vr93xKFW3XjEHuRyBwyPM&callback=initMap">
+    </script>
 </body>
 
 </html>

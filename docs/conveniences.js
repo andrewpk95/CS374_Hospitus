@@ -47,13 +47,41 @@ var hk = getQueryVariable("hospital-key");
 console.log(hk);
 var hs = db.ref('/Hospitals');
 var hsgrid;
-hs.once('value', function (snapshot) {
+hs.once('value', function(snapshot) {
     hsgrid = snapshot.child(hk).child("Grid").val();
-    hsgrid = hsgrid.replace(/\s/g,'');
-    console.log(hsgrid);
-    var baseURL = 'https://www.google.com/maps/embed/v1/place?key=AIzaSyDx6E2nPO3IM9vr93xKFW3XjEHuRyBwyPM&q=stores';
-    var gmap = document.getElementById('google-map');
-    var mapURL = baseURL + '&center=' + hsgrid;
-    gmap.setAttribute('src', mapURL);
+    console.log("HSGRID: " + hsgrid);
+    initMap();
 });
+function initMap() {
+    var latlng = hsgrid.split(', ');
+    var lat = parseFloat(latlng[0]);
+    var lng = parseFloat(latlng[1]);
+    console.table(latlng);
+    var myLatLng = new google.maps.LatLng({lat: lat, lng: lng});
+	//36.362588,127.417769
+	console.log("myLatLng: " + myLatLng);
+	var mapOptions = {
+		zoom: 15,
+		center: myLatLng,
+		mapTypeId: 'roadmap',
+    };
+	map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        animation: google.maps.Animation.DROP,
+        title: 'Hello World!'
+      });
+    infoWindow = new google.maps.InfoWindow();
+}
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+	infoWindow.setPosition(pos);
+	infoWindow.setContent(
+		browserHasGeolocation
+			? 'Error: The Geolocation service failed.'
+			: "Error: Your browser doesn't support geolocation."
+	);
+	infoWindow.open(map);
+}
 
