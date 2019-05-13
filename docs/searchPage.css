@@ -1,17 +1,8 @@
 
-/*.result {
-	padding: 5px;
-	background-color: #A9A9A9;
-	display: grid;
-	grid-template-columns: 40% 60%;
-	grid-template-columns: 1fr 4fr;
-
-}*/
-
 .result{
     border: 2px solid #ccc;
     display:grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 3fr 3fr;
     grid-gap: 1em;
     background: #eee;
 }
@@ -48,8 +39,4 @@
 	margin: auto;
 	margin-left: 10%;
 	width: 80%;
-}
-
-p {
-	
 }
