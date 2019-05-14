@@ -99,6 +99,13 @@ Most difficult part of designing the UI was the bias I had naturally. I cannot t
 
 ### 20150002 Dorjnyam
 
+I was in charge of Nearby Conveniences page. The page displays 3 buttons and a map. Users can view nearby locations of restaurants, transportation, and stores by pressing the buttons. The page displays map for each hospital by getting their unique ID from the query string. It makes call to Firebase and receives each hospital’s latitude and longitude coordinates stored in the database.
+
+Using Google Javascript API was bit difficult at first as it was quite different than when I used Embed API. However, after reading documentation and seeing examples, it became easier.
+
+I made the page responsive by using CSS Grid template layouts. I would say CSS Grid is the most important thing I learned from this implementation task.
+
+I opted to use Semantic UI for its clean design and intuitive semantics. It was better than using Bootstrap as we were using CSS Grid for page layouts. 
 
 
 ### 20160738 Van Hoang
