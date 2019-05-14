@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
 body {
     background-color: ;
 }
@@ -19,15 +27,17 @@ body {
 }
 
 .checked {
-    color: yellow;
+    color: red;
 }
 
-.reviews{
+.reviews {
     border: 2px solid #ccc;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
     grid-row-gap: 2em;
     background: #eee;
+    padding: 30px;
+    grid-column-gap: 1em
 }
 
 
@@ -37,6 +47,7 @@ body {
     grid-template-columns: 1fr 2fr;
     grid-gap: 1em;
     background: #ccc;
+    padding: 30px;
 }
 
 .makeReview{
@@ -50,6 +61,6 @@ body {
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     background: #ccc;
-    padding: 10px;
+    padding: 30px;
     border: 2px solid #eee;
 }
