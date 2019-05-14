@@ -57,7 +57,7 @@ body {
 }
 
 .otherReviews {
-    grid-row-gap: 3px;
+    grid-row-gap: 1.5em;
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     background: #ccc;
