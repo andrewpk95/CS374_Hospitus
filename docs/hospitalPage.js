@@ -497,6 +497,9 @@ $(document).ready(function () {
         var rs
         var rf
         var rl
+        if (document.getElementById("ro1").className === 'fa fa-star' && document.getElementById("rh1").className === 'fa fa-star' && document.getElementById("rs1").className === 'fa fa-star' && document.getElementById("rf1").className === 'fa fa-star' && document.getElementById("rl1").className === 'fa fa-star' && document.getElementById("makeReview").value == "") {
+            return 0;
+        }
         if (document.getElementById("ro5").className === 'fa fa-star checked') {
             ro = 5
         }
