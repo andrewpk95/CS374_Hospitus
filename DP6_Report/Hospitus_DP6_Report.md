@@ -64,26 +64,29 @@ Our team used JQuery UI, semantics UI, Firebase, and Google Maps for external li
 
 | | |
 |-|-|
-|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP6_Report/3.png)|Review page accepts the firebase key of the hospital user clicked from the search page. Based on the key, the page will load all the information needed for the hospital page. On the top, it will load the hospital image and the basic information shown in the search page to ensure that the user clicked on the right hospital. It additionally provides how many of which types of rooms hospital is providing. <br />Below that, the user can click on the book a room, and it will display a small form in front of the review page. That will be explained below in detail.<br />Then is the ratings. The ratings are fetched from the firebase and then shown in stars. Yellow stars represent the actual stars and black stars are empty. It is naturally easy to perceive.<br />Finally reviews are at the bottom. The user can view what others have written about the hospital. User can also give rating and add a review to add on to the evaluation. All the reviews are stored on the firebase as well and loaded accordingly. Whenever a new review is written, it will be added to the bottoms of the reviews.|
+|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP6_Report/4.png)|Review page accepts the firebase key of the hospital user clicked from the search page. Based on the key, the page will load all the information needed for the hospital page. On the top, it will load the hospital image and the basic information shown in the search page to ensure that the user clicked on the right hospital. It additionally provides how many of which types of rooms hospital is providing. <br />Below that, the user can click on the book a room, and it will display a small form in front of the review page. That will be explained below in detail.<br />Then is the ratings. The ratings are fetched from the firebase and then shown in stars. Yellow stars represent the actual stars and black stars are empty. It is naturally easy to perceive.<br />Finally reviews are at the bottom. The user can view what others have written about the hospital. User can also give rating and add a review to add on to the evaluation. All the reviews are stored on the firebase as well and loaded accordingly. Whenever a new review is written, it will be added to the bottoms of the reviews.|
 
 #### 4. Booking Page
 
 | | |
 |-|-|
-|![4](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP6_Report/4.png)|Clicking the book a room button will display this small form. You can decide which room you would like to book and click on booking. Then it will disappear and show the review page again. The review page will now display accommodation with the change taken in account.|
+|![4](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP6_Report/5.png)|Clicking the book a room button will display this small form. You can decide which room you would like to book and click on booking. Then it will disappear and show the review page again. The review page will now display accommodation with the change taken in account.|
 
 #### 5. Nearby Conveniences Page
 
 | | |
 |-|-|
-|![5](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP6_Report/5.png)|Nearby conveniences page displays a map with 3 selectors (restaurant, transportation, and store). By pressing on each button, user can get a map containing nearby places filtered by that selector. Markers are placed using the Google Maps Javascript API.|
+|![5](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP6_Report/6.png)|Nearby conveniences page displays a map with 3 selectors (restaurant, transportation, and store). By pressing on each button, user can get a map containing nearby places filtered by that selector. Markers are placed using the Google Maps Javascript API.|
 
 
 ## 3. Individual Reflections
 
 ### 20130736 Andrew Kim
 
-I was in charge of developing the Home Page, implementing functions and designing UI. I also created the database of hospitals, rooms and reviews for other pages to use. One difficulty I faced was making the UI look pretty on mobile. Since I did not know I could test how it looks on mobile directly on PC using the “Inspect” option, I had to commit to GitHub page every time I wanted to test how it looks on my phone. Another difficulty I faced was designing the structure of the database. Since I was used to normalizing SQL database, using key-value based database like Firebase came unnatural to me. What I mostly learned through this experience was setting up and using Firebase, and helping others use the database that I designed. 
+I was in charge of developing the Home Page, implementing functions and designing UI. I also created the database of hospitals, rooms and reviews for other pages to use. Finally, I created the framework of the Booking Page Popup using JQuery UI. 
+One difficulty I faced was making the UI look pretty on mobile. Since I did not know I could test how it looks on mobile directly on PC using the “Inspect” option, I had to commit to GitHub page every time I wanted to test how it looks on my phone. Another difficulty I faced was designing the structure of the database. Since I was used to normalizing SQL database, using key-value based database like Firebase came unnatural to me. 
+What I mostly learned through this experience was setting up and using Firebase, and helping others use the database that I designed. 
+
 
 ### 20130760 Junho Son
 
