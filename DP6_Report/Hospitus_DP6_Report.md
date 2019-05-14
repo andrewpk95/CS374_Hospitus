@@ -84,7 +84,9 @@ Our team used JQuery UI, semantics UI, Firebase, and Google Maps for external li
 ### 20130736 Andrew Kim
 
 I was in charge of developing the Home Page, implementing functions and designing UI. I also created the database of hospitals, rooms and reviews for other pages to use. Finally, I created the framework of the Booking Page Popup using JQuery UI. 
+
 One difficulty I faced was making the UI look pretty on mobile. Since I did not know I could test how it looks on mobile directly on PC using the “Inspect” option, I had to commit to GitHub page every time I wanted to test how it looks on my phone. Another difficulty I faced was designing the structure of the database. Since I was used to normalizing SQL database, using key-value based database like Firebase came unnatural to me. 
+
 What I mostly learned through this experience was setting up and using Firebase, and helping others use the database that I designed. 
 
 
