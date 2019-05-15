@@ -23,9 +23,9 @@ A foreigner seeking treatment and accommodation who doesn’t know Korean.
 
 ### Tasks
 
-1. Provides the most suitable hospital for the user
-2. User can see the nearby conveniences of the hospital he/she plans to visit
-3. User can provide information on the hospital he/she stayed for the next users
+1. Find the most suitable hospital
+2. Check if the hospital you chose provides all the conveniences you might need staying there
+3. Provide information on the hospital you stayed for the next users
 
 Our tasks are related to our target user because...
 
@@ -89,18 +89,28 @@ One difficulty I faced was making the UI look pretty on mobile. Since I did not 
 
 What I mostly learned through this experience was setting up and using Firebase, and helping others use the database that I designed. 
 
-
 ### 20130760 Junho Son
 
+I designed the review page of the Hospitus webpage. The review page is the most crucial page of our system, since a lot of information is displayed, and also a lot can be done within the page. I used the css grid to divide the page, so that I can group the relevant information. Css grid was important in spacing out the page as well because the review page contained many functions. I put the hospital information at the top, since that is what the user is probably most interested in. Then I put the ratings of the hospitals and finally the reviews of the hospital. Buttons leading to nearby conveniences and booking is at the top component as well, since they are important. Rating was given in stars which is an universal sign, making it easy for the user to perceive. The user can also give his ratings and review about the hospital.
 
+I linked the webpage to the firebase completely. Every single information including reviews, image and booking is stored in the firebase. When the user enters a certain hospital’s review page, the key for the hospital in the firebase is passed in the url and I used that url to extract information from the firebase to show on the webpage. Unfortunately, the speed is pretty slow, so the webpage first loads all the hard coded components of the html and then loads the information from the firebase, but I couldn’t figure out a way to fix this problem because the only solution is to hardcode the whole page and then replicate it for every other hospitals in the firebase. It will be a hard process as we increase the number of hospitals.
+
+Most difficult part of designing the UI was the bias I had naturally. I cannot think in the user’s position and make everything convenient for the user. I had to change the positions of the components and make it natural as possible. Also, I have looked at other webpages to see how others design web UIs. That helped me to think like a user.
 
 ### 20150002 Dorjnyam
 
+I was in charge of Nearby Conveniences page. The page displays 3 buttons and a map. Users can view nearby locations of restaurants, transportation, and stores by pressing the buttons. The page displays map for each hospital by getting their unique ID from the query string. It makes call to Firebase and receives each hospital’s latitude and longitude coordinates stored in the database.
+
+Using Google Javascript API was bit difficult at first as it was quite different than when I used Embed API. However, after reading documentation and seeing examples, it became easier.
+
+I made the page responsive by using CSS Grid template layouts. I would say CSS Grid is the most important thing I learned from this implementation task.
+
+I opted to use Semantic UI for its clean design and intuitive semantics. It was better than using Bootstrap as we were using CSS Grid for page layouts. 
 
 
 ### 20160738 Van Hoang
 
-
+In Project 6, I have implemented functions and design UI for Search Result Page. During the implementation, I have faced several problems and difficulties. One of them was designing the UI to be suitable for mobile version, since our app is intended to mainly run on mobile phone. Another problem was that I was not familiar with Firebase, so I had to spend quite a lot of time to learn how to use it. Overall, I have learned some useful skills such as creating and managing database by using Firebase, as well as using CSS Grid to design UI for mobile app. 
 
 
 ## 4. Studio Reflections
