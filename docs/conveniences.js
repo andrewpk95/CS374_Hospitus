@@ -47,9 +47,12 @@ var hk = getQueryVariable("hospital-key");
 console.log(hk);
 var hs = db.ref('/Hospitals');
 var hsgrid;
+var hsname;
 hs.once('value', function(snapshot) {
     hsgrid = snapshot.child(hk).child("Grid").val();
+    hsname = snapshot.child(hk).child("Name").val();
     console.log("HSGRID: " + hsgrid);
+    $('#hosp_name').text(hsname);
     initMap();
 });
 var lat, lng;
