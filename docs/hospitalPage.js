@@ -650,6 +650,7 @@ $(document).ready(function () {
         else {
             $('#or').append("<div style=\"border-right: 2px solid #000; border-top: 2px solid #000; border-bottom: 2px solid #000; background: #eee \">" + "<span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span><span class=\"fa fa-star\"></span></div>")
         }
+        alert("Your review has been submitted!")
     }
     hc.once('value', function (snapshot) {
         snapshot.child(hk).forEach(function (ss1) {
@@ -677,6 +678,7 @@ $(document).ready(function () {
         document.getElementById("nc").onclick = function () {
             window.location.href = "conveniences.html" + "?hospital-key=" + hk
         }
+
     })
 
     function bookRoom() {
