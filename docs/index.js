@@ -6,6 +6,16 @@ var injuries = [
 	"Head Injury"
 ]
 
+// Get User's permission to access user's location
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(function (position) {
+    save_location(position.coords.latitude, position.coords.longitude);
+  });
+} 
+else {
+  console.log("Cannot access user location!");
+}
+
 $( document ).ready(function() {
   $('#injury_input').autocomplete({
     source: injuries,
@@ -19,8 +29,21 @@ $( document ).ready(function() {
       this.menu.element.outerWidth(200);
     }
   });
+  $(".injury").click(function() {
+    submit_injury($(this).attr('id'));
+  })
 });
 
 function submit_injury(input) {
-	window.location.href = "searchPage.html";
+  var url = "searchPage.html?injury=" + input + "%20Injury";
+  if (latitude && longtitude) {
+    url += "&latitude=" + latitude + "&longtitude=" + longtitude;
+  }
+	window.location.href = url;
+}
+
+function save_location(x, y) {
+  latitude = x;
+  longtitude = y;
+  $(".location").text("Your Location: " + latitude + ", " + longtitude);
 }

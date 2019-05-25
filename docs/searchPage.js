@@ -133,25 +133,5 @@ $(document).ready(function() {
 })
 
 
-function getURLParameters() {
-	var queryString = window.location.search.slice(1);
-	var obj = {};
-  if (queryString) {
-    var arr = queryString.split('&');
-    for (var i = 0; i < arr.length; i++) {
-      var a = arr[i].split('=');
-      var paramName = a[0];
-      var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
-			if (!obj[paramName]) {
-				obj[paramName] = paramValue;
-			} else if (obj[paramName] && typeof obj[paramName] === 'string'){
-				obj[paramName] = [obj[paramName]];
-				obj[paramName].push(paramValue);
-			} else {
-				obj[paramName].push(paramValue);
-			}
-    }
-  }
-  return obj;
-}
+
 
