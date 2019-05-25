@@ -3,7 +3,6 @@ $(document).ready(function() {
 	//var specialty = window.location.hash.substring(1);
 	var parameters = getURLParameters();
 	var specialty = parameters.injury.replace("%20", " ");
-
 	const hospitals = firebase.database().ref().child("Hospitals");
 
 	console.log(getURLParameters());
@@ -12,17 +11,15 @@ $(document).ready(function() {
 		$("input[name='sort_category'][value='" + parameters.sortby + "']").attr("checked","checked");
 	}
 
-	//Make sorting radio buttons refresh the page just to make it look like
-	//the sorting function works. (Sorting not implemented yet)
 	$("input[name='sort_category']").change(function() {
 		window.location.href = "searchPage.html" + "?injury=" + parameters.injury + "&sortby=" + this.value;
 	});
 
-	//hospitals.on("value", function(snapshot){
-	//	alert(snapshot.child("1/Specialty/1").val());
-	//})
 	var result_list = document.getElementById("results");
-	hospitals.on("value", function(snapshot){
+
+	var sort_value = document.querySelector('input[name="sort_category"]:checked').value;
+
+	hospitals.orderByChild("Rating/"+sort_value).on("value", function(snapshot){
 		snapshot.forEach(function(childNodes) {
 			if (childNodes.val().Specialty == specialty) {
 
@@ -95,8 +92,7 @@ $(document).ready(function() {
 				var b = document.createElement("b");
 				b.innerHTML = "Equipment: ";
 				equipment.appendChild(b);
-				//equipment.innerHTML = node.Equipments;
-				//equipment.innerHTML = equipment.innerHTML.substring(1);
+				
 				equipment.innerHTML = equipment.innerHTML+node.Equipments;
 				right_div.appendChild(equipment);
 
@@ -104,8 +100,7 @@ $(document).ready(function() {
 				var b = document.createElement("b");
 				b.innerHTML = "Facilities: ";
 				facilities.appendChild(b);
-			//	facilities.innerHTML = node.Facilities;
-			//	facilities.innerHTML = facilities.innerHTML.substring(1);
+			
 				facilities.innerHTML = facilities.innerHTML+node.Facilities;
 				right_div.appendChild(facilities);
 
@@ -124,12 +119,13 @@ $(document).ready(function() {
 
 				result.appendChild(left_div);
 				result.appendChild(right_div);
-				result_list.appendChild(result);
+				result_list.insertBefore(result,result_list.childNodes[0]);
 
 			}
 
 		})
 	})
+
 })
 
 
