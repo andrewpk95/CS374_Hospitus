@@ -32,6 +32,9 @@ $( document ).ready(function() {
   $(".injury").click(function() {
     submit_injury($(this).attr('id'));
   })
+  $("#all_hospitals").click(function() {
+    submit_injury("All");
+  })
 });
 
 function submit_injury(input) {
@@ -45,5 +48,5 @@ function submit_injury(input) {
 function save_location(x, y) {
   latitude = x;
   longtitude = y;
-  $(".location").text("Your Location: " + latitude + ", " + longtitude);
+  $("#location").text("Your Location: " + latitude + ", " + longtitude);
 }
