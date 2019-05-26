@@ -1,4 +1,4 @@
-# CS374 DP6 Report - Hi-fi Prototyping
+# CS374 DP7 Report - User Testing
 
 Team Hospitus
 
@@ -11,120 +11,163 @@ Team Hospitus
 20160738 Van Hoang
 
 
-## 1. POV, Target Users, Tasks
+## 1. Written Protocol
 
-### POV
+### Setting up the testing environment: 
 
-A foreigner who suffers from sports injury [user] needs to find a good hospital with ample accommodation space quickly [needs] because without information, he or she may waste a lot of time jumping between hospitals [insights]. 
+For the user testing of Hospitus, prepare a cell phone, notes and stationary. Ask a foreigner if he/she can participate in the usertesting. If they say yes, the facilitator should ask the participant to open up the page with the phone using google chrome: (URL: https://andrewpk95.github.io/CS374_Hospitus/). 
 
-### Target Users
+### Introduction and informed consent: 
 
-A foreigner seeking treatment and accommodation who doesn’t know Korean.
+For the experiment, we will be collecting feedback through notes and take a photo of the participant with the facilitator. Make sure that the participant understands what is required of him/her and acquire the participant’s consent.
 
-### Tasks
+First, the facilitator asks the patient about demographic information that relates to the user testing. Following are the questions:
 
-1. Find the most suitable hospital
-2. Check if the hospital you chose provides all the conveniences you might need staying there
-3. Provide information on the hospital you stayed for the next users
+1. What is your age?
+2. What is your occupation?
+3. How long have you been in Korea?
+4. Have you previously visited hospitals in Korea, and if you did, how was it?
+5. How was your first experience of visiting hospital in Korea?
+6. How do you usually look for a hospital?
+7. Do you play sports, and if you do, have you been injured from sports before?
 
-Our tasks are related to our target user because...
+The test will only continue if the participant is a suitable target user for Hospitus, judging from information gathered from above questions. The facilitator should pass the patient introduction of Hospitus. Further explanation will be given by facilitator if needed.
 
-1. Foreigners unlike locals, don’t have a lot of friends or acquaintances in Korea to suggest hospitals to use. It is difficult for them to find the hospitals that suits them and having a validation system created by other fellow foreigners can help them find a hospital.
-2. Since the foreigners are experiencing language barriers, they have a hard time contacting the hospitals ahead and asking them about the information of the hospital, or finding them online. Hospitus can provide that information fast and easy so that the foreigners know what they are getting into.
-3. Foreigners often have hard time searching for conveniences. We provide all the information about that so that our users can have access to whatever they might need.
-4. Users can express how they felt about the hospitals they have been to, and help other potential users
+### Introduction:
+
+“Hello, and welcome to user testing of ‘Hospitus’
+Hospitus is a website that helps foreigners residing in Korea find suitable hospitals quickly, when they get abrupt sport injuries. Now imagine you have just been injured playing your favorite sports. Use Hospitus to guide you and perform the tasks that will be given to you.”
+
+After the introduction is properly given to the participant, the facilitator will then show functionality of the website by going through an example search with another prepared cell phone. Then the participant is asked to read the tasks.
+
+### Task list and instruction:
+
+1. Find the most suitable hospital based on the information provided by Hospitus.
+2. Check if the hospital you chose provides all the conveniences you might need staying there.
+3. Provide information on the hospital you stayed for the next users.
+
+The facilitator should help the participants when they are completely lost.
+
+### Recording Strategy:
+
+While the test is being performed, observers write down any inconveniences or confusions displayed by the participant. They will also write down information from the pre-interview and the post-interview
+
+### Interview questions:
+
+After the participants are done with the three tasks and all feedbacks and observations are written down, the facilitator must ask the following interview questions: 
+
+1. How was your experience using our website?
+2. Were there any confusions?
+3. Were there any functionalities you would like to see in our website or any functionalities you did not understand?
+4. Any comments on the UI?
+
+### Debrief Prompt: 
+
+After the test, read the following debrief prompt to the participant: 
+
+"Thank you for giving us your valuable time and participating in our user testing. We will make sure that your valuable feedbacks will be taken into account to improve our application and your experience in the future. We will make sure any foreigners can easily find suitable hospitals in Korea. Again, thank you for participating.”
 
 
-## 2. Implementation Notes
+## 2. Session Observations
  
-### Prototype URL: https://andrewpk95.github.io/CS374_Hospitus/
-* Developed for viewing on mobile.
+### Participant #1: 
 
-### GitHub URL: https://github.com/andrewpk95/CS374_Hospitus/tree/master/docs
+![1](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP7_Report/1.jpg)
 
-### Libraries and Framework: 
+Age: 30
 
-Our team used JQuery UI, semantics UI, Firebase, and Google Maps for external library.
+Occupation: Ph.D candidate
 
-### Representative screenshots
+P1 has lots of experience of going to hospital for various reasons: sports injury, dental, and surgery. He did not understand the language and did not know locations of hospital. He found hospital to stay by doctor recommendation or by asking acquaintances. He emphasized importance of insurance coverage of hospitals.    
 
-#### 1. Home Page
+Summary: Participant 1 had the most experience in Korea and since he was a CS major, he provided very important usability feedbacks. 
 
-| | |
-|-|-|
-|![1](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP6_Report/1.png)|Injured users must find a hospital urgently and also it is difficult to click. We tried to reduce the time to the minimum by adding pictures instead of text. Each image is related to a body part. The user can decide what to click easily among the six choices we give him. Since it is a picture it is easier to click as well. It would be difficult for an injured person to click accurately on a text. After clicking a certain image, that information will be sent to the next page, which is the search results page.|
+### Participant #2: 
 
-#### 2. Search Results Page
+![2](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP7_Report/2.jpg)
 
-| | |
-|-|-|
-|![2](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP6_Report/2.png)|The Search result page shows a list of hospitals that specializing in the specific injury that the user have searched for. On the top of the page are some sorting options. Users can click on the radio buttons and the app will shows the result list based on different categories. Each result will show the name, image, rating and a short description of the hospital.  Next to the Address line is a Show on map button, which users can click to see the location of the hospital on the map. If users click on the name or the image of the hospital, the app will show the review page with detailed information and review about that hospital.|
+Age: 19
 
-#### 3. Hospital Page / Review Page
+Occupation: Sophomore
 
-| | |
-|-|-|
-|![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP6_Report/4.png)|Review page accepts the firebase key of the hospital user clicked from the search page. Based on the key, the page will load all the information needed for the hospital page. On the top, it will load the hospital image and the basic information shown in the search page to ensure that the user clicked on the right hospital. It additionally provides how many of which types of rooms hospital is providing. <br />Below that, the user can click on the book a room, and it will display a small form in front of the review page. That will be explained below in detail.<br />Then is the ratings. The ratings are fetched from the firebase and then shown in stars. Yellow stars represent the actual stars and black stars are empty. It is naturally easy to perceive.<br />Finally reviews are at the bottom. The user can view what others have written about the hospital. User can also give rating and add a review to add on to the evaluation. All the reviews are stored on the firebase as well and loaded accordingly. Whenever a new review is written, it will be added to the bottoms of the reviews.|
+P2 has been in Korea for 1.5 years. He has been to hospital two times: one for incision injury and one for sports injury. His advisor went with him to hospitals and helped with communication with staff. 
 
-#### 4. Booking Page
+He preferred to use Naver maps (it is more exhaustive). He wanted search by type of injury such as cut, fracture, and bone break besides location of injury.
 
-| | |
-|-|-|
-|![4](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP6_Report/5.png)|Clicking the book a room button will display this small form. You can decide which room you would like to book and click on booking. Then it will disappear and show the review page again. The review page will now display accommodation with the change taken in account.|
+Summary: Participant 2 had minimal experience on visiting hospitals, and provided what could have gone better with his experience.
 
-#### 5. Nearby Conveniences Page
+### Participant #3: 
 
-| | |
-|-|-|
-|![5](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP6_Report/6.png)|Nearby conveniences page displays a map with 3 selectors (restaurant, transportation, and store). By pressing on each button, user can get a map containing nearby places filtered by that selector. Markers are placed using the Google Maps Javascript API.|
+![3](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP7_Report/3.jpg)
 
+Age: 19
 
-## 3. Individual Reflections
+Occupation: Freshman in KAIST
 
-### 20130736 Andrew Kim
+P3 has been in Korea for a few months, and he has never been to hospital before
 
-I was in charge of developing the Home Page, implementing functions and designing UI. I also created the database of hospitals, rooms and reviews for other pages to use. Finally, I created the framework of the Booking Page Popup using JQuery UI. 
+He provided positive feedbacks about the design of the application. He expected that the app would have the functionality of searching for hospital by the distance, not only the injury)
 
-One difficulty I faced was making the UI look pretty on mobile. Since I did not know I could test how it looks on mobile directly on PC using the “Inspect” option, I had to commit to GitHub page every time I wanted to test how it looks on my phone. Another difficulty I faced was designing the structure of the database. Since I was used to normalizing SQL database, using key-value based database like Firebase came unnatural to me. 
+Summary: Participant 3 was the most suitable target user because he doesn’t have any experience and therefore will go through trouble. He also enjoys sports judging from his physical stature which makes him a great target user for Hospitus.
 
-What I mostly learned through this experience was setting up and using Firebase, and helping others use the database that I designed. 
+### Participant #4: 
 
-### 20130760 Junho Son
+![4](https://raw.githubusercontent.com/andrewpk95/CS374_Hospitus/master/DP7_Report/4.jpg)
 
-I designed the review page of the Hospitus webpage. The review page is the most crucial page of our system, since a lot of information is displayed, and also a lot can be done within the page. I used the css grid to divide the page, so that I can group the relevant information. Css grid was important in spacing out the page as well because the review page contained many functions. I put the hospital information at the top, since that is what the user is probably most interested in. Then I put the ratings of the hospitals and finally the reviews of the hospital. Buttons leading to nearby conveniences and booking is at the top component as well, since they are important. Rating was given in stars which is an universal sign, making it easy for the user to perceive. The user can also give his ratings and review about the hospital.
+Age: 20
 
-I linked the webpage to the firebase completely. Every single information including reviews, image and booking is stored in the firebase. When the user enters a certain hospital’s review page, the key for the hospital in the firebase is passed in the url and I used that url to extract information from the firebase to show on the webpage. Unfortunately, the speed is pretty slow, so the webpage first loads all the hard coded components of the html and then loads the information from the firebase, but I couldn’t figure out a way to fix this problem because the only solution is to hardcode the whole page and then replicate it for every other hospitals in the firebase. It will be a hard process as we increase the number of hospitals.
+Occupation: Exchange Student in KAIST
 
-Most difficult part of designing the UI was the bias I had naturally. I cannot think in the user’s position and make everything convenient for the user. I had to change the positions of the components and make it natural as possible. Also, I have looked at other webpages to see how others design web UIs. That helped me to think like a user.
+P4 has been in Korea for 3 months, and he had an experience in finding a hospital in Korea using 114 call center. The call center spoke English and found a suitable hospital for him, and he had an acceptable experience. 
 
-### 20150002 Dorjnyam
-
-I was in charge of Nearby Conveniences page. The page displays 3 buttons and a map. Users can view nearby locations of restaurants, transportation, and stores by pressing the buttons. The page displays map for each hospital by getting their unique ID from the query string. It makes call to Firebase and receives each hospital’s latitude and longitude coordinates stored in the database.
-
-Using Google Javascript API was bit difficult at first as it was quite different than when I used Embed API. However, after reading documentation and seeing examples, it became easier.
-
-I made the page responsive by using CSS Grid template layouts. I would say CSS Grid is the most important thing I learned from this implementation task.
-
-I opted to use Semantic UI for its clean design and intuitive semantics. It was better than using Bootstrap as we were using CSS Grid for page layouts. 
+Summary: Participant 4 showed no difficulty navigating through the website. He provided a lot of feedbacks for our website and suggestions for improvements. 
 
 
-### 20160738 Van Hoang
+## 3. Usability Lessons
 
-In Project 6, I have implemented functions and design UI for Search Result Page. During the implementation, I have faced several problems and difficulties. One of them was designing the UI to be suitable for mobile version, since our app is intended to mainly run on mobile phone. Another problem was that I was not familiar with Firebase, so I had to spend quite a lot of time to learn how to use it. Overall, I have learned some useful skills such as creating and managing database by using Firebase, as well as using CSS Grid to design UI for mobile app. 
+* [High] Injury selection is too limited on the Home page.(P2, P3, P4)
+  * Solution: Make an option to show all hospitals instead of injury specific.
+* [High] Visual feedback when submitting a review (P1)
+  * Solution: Provide visual feedback like animated modal 
+* [High] Users did not use nearby conveniences function (P2, P3)
+  * Solution: Make a visual indicator to click the necessary buttons
+* [High] User wants to know the nearest hospital not injury specific (P3)
+  * Solution: Make an option to show all hospitals instead of injury specific.
+* [Medium] Review format is not clear enough. Past reviews have been mistaken for options for writing review (P1)
+  * Solution: Add Description for the past reviews
+* [Medium] Users did not recognizing rating, they only saw submitting reviews(All)
+  * Solution: Make the rating more visible and put a text description to make sure user knows what to do
+* [Medium] Book an appointment instead of just hospitalization (P1)
+  * Solution: Add a functionality to make an appointment, too.
+* [Medium] Search Page contains too much text / too much information (P4)
+  * Solution: Remove unnecessary information such as equipments. 
+* [Medium] There is no way for users to check the booked info once booking is complete, users should be able to log in to check their booking information (P4)
+  * Solution: Add log in function to allow users to see their booking information. 
+* [Low] Naver maps might be better than Google maps because Naver map is specialized for Korea. (P2)
+  * Solution: Consider using Naver Map API instead of Google Map API. 
+* [Low] Only the hospital name and image being clickable in search page (P1)
+  * Solution: Consider making the whole <div> about a hospital clickable.
+* [Low] User wants to see authors of the comments (P1)
+  * Solution: Add user system for the review
+* [Low] User wants to see the date of review comments (P4)
+  * Solution: Add to each previous reviews what time it was written at. 
+* [Low] Hospitals may have more than one specialty (P4)
+  * Solution: Add more than one specialty to some of the hospitals. 
+* [Low] Adding filtering option to cull out search results by distance may be helpful (P4)
+  * Solution: Add filter option in the Search Page. 
+* [Low] User may want to rate the hospital by “Price” (P4)
+  * Solution: Add “Price” rating. 
+* [Low] User may want to know the open time of the hospital and contact info of the hospital in the Hospital Page (P4)
+  * Solution: Add open time and phone number to each hospitals. 
+* [Low] User wants to see more pictures of the hospital (P4)
+  * Solution: Add more pictures and make them viewable by slideshow. 
+
 
 
 ## 4. Studio Reflections
 
 **Constructive Feedbacks:**
-- First page is intuitive because of pictures
-- Booking a room function
-- Markers on Google map makes it easy to find specific locations
+- 
 
 **Feedbacks to be addressed:**
-- The color of the stars in the review page needs to be less saturated -> use colors that are more comfortable to the eye.
-- The injury icons in the homepage needs description -> Add text caption at the bottom of each icon
-- There needs to be another way to search for the hospitals -> Add another option to search for the hospital
-- Overall design needs to be less packed -> Make the design spacious
-- Alerts might be bothering -> Remove unnecessary alerts
-- Style is inconsistent -> Unify the style
-- Store selection is not displayed -> Highlight the options selected currently to let the user know where he/she is
+- 
