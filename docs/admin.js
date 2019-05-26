@@ -30,39 +30,42 @@ $( document ).ready(function() {
   });
   // Booking Page javascript code
 
-  /*
+
   var hospital = {
-    Name: "Maeil Hospital",
-    Address: "34 Dunsan, Daejeon",
+    Name: "Heorisarang Hospital",
+    Address: "618, Gyeryong-ro, Seo-gu, Daejeon",
     Equipments: {
-      1: "X-Ray",
-      2: "MRI"
+        1: "X-Ray",
+        3: "MRI"
     },
     Facilities: {
-      1: "None"
+        1: "Physical Therapy"
     },
-    Specialty: "Leg",
+    Grid: "36.339587, 127.390806",
+    Image: "",
+    Distance: "0 km",
+    Specialty: "Back Injury",
     Rating: {
-      Overall: 2.5,
-      Service: 1.7,
-      Food: 2.5,
-      Hygiene: 3.8,
-      Location: 1.0
+      Overall: 1.6,
+      Service: 2.0,
+      Food: 1.4,
+      Hygiene: 1.3,
+      Location: 2.3
     }
   };
   var room = {
-    Available: 0,
-    Total: 120,
+    Available: 18,
+    Total: 40,
     Types: {
-      Groups: {
-        Available: 0,
-        Total: 120,
-      }
+      Quadraples: {
+          Available: 18,
+          Total: 40
+      },
     }
   };
   
-  var hospitalKey = "-Le_xKHpMMihSWMMsRyg";
-  var reviews = {
+ // var hospitalKey = "-Le_xKHpMMihSWMMsRyg";
+/*  var reviews = {
     Comment: "Never coming back here. ",
     Rating: {
       Overall: 1.0,
@@ -71,14 +74,13 @@ $( document ).ready(function() {
       Hygiene: 1.0,
       Location: 1.0
     }
-  };
-  firebase.database().ref("Reviews").child(hospitalKey).push(reviews);
+  };*/
+  //firebase.database().ref("Reviews").child(hospitalKey).push(reviews);
   
   firebase.database().ref("Hospitals").push(hospital).then(function (snapshot) {
     firebase.database().ref("Rooms").child(snapshot.key).set(room);
     firebase.database().ref("Reviews").child(snapshot.key).push(reviews);
   });
-  */
 });
 
 // Booking Page javascript code
