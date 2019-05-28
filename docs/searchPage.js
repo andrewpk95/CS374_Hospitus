@@ -74,7 +74,7 @@ $(document).ready(function() {
 				var modal = document.getElementById("modal");
 				see_map.onclick = function() {
 					var map = document.getElementById("myFrame");
-					map.setAttribute("src","https://www.google.com/maps/embed/v1/place?key=AIzaSyCvRU1kubBR8WhgxQBXqcOLmhv-YaxOTbc&q="+node.Address+"&language=en&zoom=15");
+					map.setAttribute("src","https://www.google.com/maps/embed/v1/directions?key=AIzaSyCvRU1kubBR8WhgxQBXqcOLmhv-YaxOTbc&origin="+parameters.latitude+","+parameters.longtitude+"&destination="+node.Address+"&mode=transit&zoom=13");
 					modal.style.display = "block";
 				}
 
