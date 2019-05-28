@@ -35,8 +35,7 @@ The test will only continue if the participant is a suitable target user for Hos
 
 ### Introduction:
 
-“Hello, and welcome to user testing of ‘Hospitus’
-Hospitus is a website that helps foreigners residing in Korea find suitable hospitals quickly, when they get abrupt sport injuries. Now imagine you have just been injured playing your favorite sports. Use Hospitus to guide you and perform the tasks that will be given to you.”
+> “Hello, and welcome to user testing of ‘Hospitus.’ <br /> Hospitus is a website that helps foreigners residing in Korea find suitable hospitals quickly, when they get abrupt sport injuries. Now imagine you have just been injured playing your favorite sports. Use Hospitus to guide you and perform the tasks that will be given to you.”
 
 After the introduction is properly given to the participant, the facilitator will then show functionality of the website by going through an example search with another prepared cell phone. Then the participant is asked to read the tasks.
 
@@ -50,7 +49,7 @@ The facilitator should help the participants when they are completely lost.
 
 ### Recording Strategy:
 
-While the test is being performed, observers write down any inconveniences or confusions displayed by the participant. They will also write down information from the pre-interview and the post-interview
+While the test is being performed, observers write down any inconveniences or confusions displayed by the participant. They will also write down information from the pre-interview and the post-interview. 
 
 ### Interview questions:
 
@@ -65,7 +64,7 @@ After the participants are done with the three tasks and all feedbacks and obser
 
 After the test, read the following debrief prompt to the participant: 
 
-"Thank you for giving us your valuable time and participating in our user testing. We will make sure that your valuable feedbacks will be taken into account to improve our application and your experience in the future. We will make sure any foreigners can easily find suitable hospitals in Korea. Again, thank you for participating.”
+> "Thank you for giving us your valuable time and participating in our user testing. We will make sure that your valuable feedbacks will be taken into account to improve our application and your experience in the future. We will make sure any foreigners can easily find suitable hospitals in Korea. Again, thank you for participating.”
 
 
 ## 2. Session Observations
@@ -125,26 +124,27 @@ Summary: Participant 4 showed no difficulty navigating through the website. He p
 
 ## 3. Usability Lessons
 
-* [High] Injury selection is too limited on the Home page.(P2, P3, P4)
-  * Solution: Make an option to show all hospitals instead of injury specific.
-* [High] Visual feedback when submitting a review (P1)
-  * Solution: Provide visual feedback like animated modal 
+### Some functionalities were not clearly visible. Users missed out on some functions:
 * [High] Users did not use nearby conveniences function (P2, P3)
   * Solution: Make a visual indicator to click the necessary buttons
-* [High] User wants to know the nearest hospital not injury specific (P3)
-  * Solution: Make an option to show all hospitals instead of injury specific.
 * [Medium] Review format is not clear enough. Past reviews have been mistaken for options for writing review (P1)
   * Solution: Add Description for the past reviews
 * [Medium] Users did not recognizing rating, they only saw submitting reviews(All)
   * Solution: Make the rating more visible and put a text description to make sure user knows what to do
+
+### Feedbacks were missing when they were required:
+* [High] Visual feedback when submitting a review (P1)
+  * Solution: Provide visual feedback like animated modal 
+* [Medium] There is no way for users to check the booked info once booking is complete, users should be able to log in to check their booking information (P4)
+  * Solution: Add log in function to allow users to see their booking information.
+
+### Some functionalities are restricting to users:
+* [High] Injury selection is too limited on the Home page.(P2, P3, P4)
+  * Solution: Make an option to show all hospitals instead of injury specific.
+* [High] User wants to know the nearest hospital not injury specific (P3)
+  * Solution: Make an option to show all hospitals instead of injury specific.
 * [Medium] Book an appointment instead of just hospitalization (P1)
   * Solution: Add a functionality to make an appointment, too.
-* [Medium] Search Page contains too much text / too much information (P4)
-  * Solution: Remove unnecessary information such as equipments. 
-* [Medium] There is no way for users to check the booked info once booking is complete, users should be able to log in to check their booking information (P4)
-  * Solution: Add log in function to allow users to see their booking information. 
-* [Low] Naver maps might be better than Google maps because Naver map is specialized for Korea. (P2)
-  * Solution: Consider using Naver Map API instead of Google Map API. 
 * [Low] Only the hospital name and image being clickable in search page (P1)
   * Solution: Consider making the whole <div> about a hospital clickable.
 * [Low] User wants to see authors of the comments (P1)
@@ -162,12 +162,39 @@ Summary: Participant 4 showed no difficulty navigating through the website. He p
 * [Low] User wants to see more pictures of the hospital (P4)
   * Solution: Add more pictures and make them viewable by slideshow. 
 
+### Others:
+[Medium] Search Page contains too much text / too much information (P4)
+  * Solution: Remove unnecessary information such as equipments. 
+[Low] Naver maps might be better than Google maps because Naver map is specialized for Korea. (P2)
+  * Solution: Consider using Naver Map API instead of Google Map API. 
+
+### Lessons from usability observations:
+* What may be obvious for us developers might not be obvious for users
+* Different users have different preferences
+* Different Users see different problems
+* User testing perfects the program
 
 
-## 4. Studio Reflections
+## 4. Plan for Iteration
+
+We can improve the process in following ways:
+* Provide incentive for participants and make them participate more active.
+* Select participants outside of KAIST.
+* Select more various tasks to give the participants.
+* Ask for preference of participants on ambiguous problems. e.g. how much should be clickable in the UI
+* Use Front-End frameworks like React or Svelte.
+
+
+## 5. Studio Reflections
 
 **Constructive Feedbacks:**
-- 
+- Effort to find users that were from our target population
+- Pre-Interview is good to find target user
+- Detailed information of target users
+- The usability observations were categorized into simple questions
 
 **Feedbacks to be addressed:**
-- 
+- Usability observations are not organized -> Organize usability observations so that they are categorized according to main themes of usability observations
+- Post-interview questions are not various -> Add more specific and differentiating post-interview questions
+- Information has not been gathered after interview, such as call center -> Do research based on the interview feedbacks
+- Some interview questions are too vague and general -> Make future interview questions clear and specific
