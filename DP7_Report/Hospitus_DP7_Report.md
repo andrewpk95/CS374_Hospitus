@@ -163,9 +163,9 @@ Summary: Participant 4 showed no difficulty navigating through the website. He p
   * Solution: Add more pictures and make them viewable by slideshow. 
 
 ### Others:
-[Medium] Search Page contains too much text / too much information (P4)
+* [Medium] Search Page contains too much text / too much information (P4)
   * Solution: Remove unnecessary information such as equipments. 
-[Low] Naver maps might be better than Google maps because Naver map is specialized for Korea. (P2)
+* [Low] Naver maps might be better than Google maps because Naver map is specialized for Korea. (P2)
   * Solution: Consider using Naver Map API instead of Google Map API. 
 
 ### Lessons from usability observations:
