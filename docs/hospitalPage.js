@@ -1,6 +1,6 @@
 var cl = window.location.href
 var clp = cl.split("=")
-
+var uobj = getURLParameters()
 var hk = clp[1]
 $(document).ready(function () {
     firebase.database().ref("Rooms").child(hk).child("Types").once("value", function (snapshot) {
