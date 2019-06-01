@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 	var sort_value = document.querySelector('input[name="sort_category"]:checked').value;
 
-	hospitals.orderByChild("Rating/"+sort_value).on("value", function(snapshot){
+	hospitals.orderByChild("Rating/"+sort_value).once("value", function(snapshot){
 		snapshot.forEach(function(childNodes) {
 			if (childNodes.val().Specialty == specialty) {
 
