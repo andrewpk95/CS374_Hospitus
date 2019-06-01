@@ -11,9 +11,9 @@ if (!parameters.latitude && !parameters.longtitude) {
 //    var d = distance(latitude, longtitude, hospital_latitude, hospital_longtitude)
 function distance(x1, y1, x2, y2) {
   var R = 6371;
-  var dLat = (y2 - y1).toRad();
-  var dLon = (x2 - x1).toRad(); 
-  var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(y1.toRad()) * Math.cos(y2.toRad()) * Math.sin(dLon / 2) * Math.sin(dLon / 2); 
+  var dLat = toRad(y2-y1);
+  var dLon = toRad(x2-x1); 
+  var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(toRad(y1)) * Math.cos(toRad(y2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2); 
   return 2 * R * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 // Converts numeric degrees to radians
@@ -21,6 +21,11 @@ if (typeof(Number.prototype.toRad) === "undefined") {
   Number.prototype.toRad = function() {
     return this * Math.PI / 180;
   }
+}
+
+function toRad(Value) {
+    /** Converts numeric degrees to radians */
+    return Value * Math.PI / 180;
 }
 
 // Returns an object with all the parameters from the url
