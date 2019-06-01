@@ -12,7 +12,7 @@ $(document).ready(function() {
 	}
 
 	$("input[name='sort_category']").change(function() {
-		window.location.href = "searchPage.html" + "?injury=" + parameters.injury + "&sortby=" + this.value;
+		window.location.href = "searchPage.html" + "?injury=" + parameters.injury +"&latitude="+parameters.latitude+"&longtitude="+parameters.longtitude+ "&sortby=" + this.value;
 	});
 
 	var result_list = document.getElementById("results");
@@ -38,7 +38,7 @@ $(document).ready(function() {
 				hospital_name.style.textDecoration = "underline";
 				
 				hospital_name.onclick = function() {
-						window.location = "hospitalPage.html"+"?hospital-key="+childNodes.key;
+					window.location = "hospitalPage.html"+"?hospital-key="+childNodes.key;
 				}
 				hospital_name.innerHTML = node.Name;
 				hospital_name.style.cursor = "pointer";
@@ -104,12 +104,20 @@ $(document).ready(function() {
 				facilities.innerHTML = facilities.innerHTML+node.Facilities;
 				right_div.appendChild(facilities);
 
-				var distance = document.createElement("p");
+				var dis = document.createElement("p");
 				var b = document.createElement("b");
 				b.innerHTML = "Distance: ";
-				distance.appendChild(b);
-				distance.innerHTML = distance.innerHTML+ node.Distance;
-				right_div.appendChild(distance);
+				dis.appendChild(b);
+				var coor = node.Grid.split(",");
+				var hospital_latitude = parseFloat(coor[0]);
+				var hospital_longtitude = parseFloat(coor[1]);
+				var latitude = parameters.latitude;
+				var longtitude = parameters.longtitude;
+				var d = distance(latitude, longtitude, hospital_latitude, hospital_longtitude);
+				dis.innerHTML = dis.innerHTML+ Math.round(d*10)/10+" km";
+				
+
+				right_div.appendChild(dis);
 
 
 				var rating = document.createElement("b");
@@ -127,7 +135,6 @@ $(document).ready(function() {
 	})
 
 })
-
 
 
 
