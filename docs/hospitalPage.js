@@ -1,7 +1,7 @@
 var cl = window.location.href
 var clp = cl.split("=")
 var uobj = getURLParameters()
-var hk = clp[1]
+var hk = uobj.hospital-key
 $(document).ready(function () {
     firebase.database().ref("Rooms").child(hk).child("Types").once("value", function (snapshot) {
         snapshot.forEach(function (child) {
