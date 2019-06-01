@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 	hospitals.orderByChild("Rating/"+sort_value).once("value", function(snapshot){
 		snapshot.forEach(function(childNodes) {
-			if (childNodes.val().Specialty == specialty) {
+			if ((childNodes.val().Specialty == specialty) || (specialty == "All Injury")){
 
 				var node = childNodes.val();
 
@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 				var result = document.createElement("div");
 				result.setAttribute("class","result");
-	;			var left_div = document.createElement("div");
+				var left_div = document.createElement("div");
 				left_div.setAttribute("class","left_div");
 				var right_div = document.createElement("div");
 				right_div.setAttribute("class","right_div");
@@ -118,8 +118,6 @@ $(document).ready(function() {
 				d1 = Math.round(d*10)/10;
 				dis.innerHTML = dis.innerHTML+ d1+" km";
 				childNodes.ref.child("Distance").set(d1);
-				
-
 				right_div.appendChild(dis);
 
 
