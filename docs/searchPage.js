@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 	hospitals.orderByChild("Rating/"+sort_value).on("value", function(snapshot){
 		snapshot.forEach(function(childNodes) {
-			if (((childNodes.val().Specialty == specialty) &&(specialty != "All Injury")) || (specialty == "All Injury")) {
+			if (childNodes.val().Specialty == specialty) {
 
 				var node = childNodes.val();
 
