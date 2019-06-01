@@ -25,6 +25,10 @@ $(document).ready(function() {
 
 				var node = childNodes.val();
 
+				var coor = node.Grid.split(",");
+				var hospital_latitude = parseFloat(coor[0]);
+				var hospital_longtitude = parseFloat(coor[1]);
+
 				var result = document.createElement("div");
 				result.setAttribute("class","result");
 	;			var left_div = document.createElement("div");
@@ -38,20 +42,20 @@ $(document).ready(function() {
 				hospital_name.style.textDecoration = "underline";
 				
 				hospital_name.onclick = function() {
-					window.location = "hospitalPage.html"+"?hospital-key="+childNodes.key;
+					window.location = "hospitalPage.html"+"?hospital-key="+childNodes.key+"?hospital-latitude="+hospital_latitude+"?hospital-longtitude="+hospital_longtitude;
 				}
 				hospital_name.innerHTML = node.Name;
 				hospital_name.style.cursor = "pointer";
 				left_div.appendChild(hospital_name);
 
 				var image = document.createElement("img");
-				
-				image.setAttribute("src", "hospital_image/"+t[0]+".jpg");
+				var src = node.Image;
+				image.setAttribute("src",src);
 				image.setAttribute("class","img");
 				image.style.padding = "5px";
 				image.style.cursor = "pointer";
 				image.onclick = function() {
-					window.location = "hospitalPage.html"+"?hospital-key="+childNodes.key;
+					window.location = "hospitalPage.html"+"?hospital-key="+childNodes.key+"?hospital-latitude="+hospital_latitude+"?hospital-longtitude="+hospital_longtitude;
 				}
 				
 				left_div.appendChild(image);
@@ -108,13 +112,12 @@ $(document).ready(function() {
 				var b = document.createElement("b");
 				b.innerHTML = "Distance: ";
 				dis.appendChild(b);
-				var coor = node.Grid.split(",");
-				var hospital_latitude = parseFloat(coor[0]);
-				var hospital_longtitude = parseFloat(coor[1]);
 				var latitude = parameters.latitude;
 				var longtitude = parameters.longtitude;
 				var d = distance(latitude, longtitude, hospital_latitude, hospital_longtitude);
-				dis.innerHTML = dis.innerHTML+ Math.round(d*10)/10+" km";
+				d1 = Math.round(d*10)/10;
+				dis.innerHTML = dis.innerHTML+ d1+" km";
+				childNodes.ref.child("Distance").set(d1);
 				
 
 				right_div.appendChild(dis);
