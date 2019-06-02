@@ -1,7 +1,9 @@
 $(document).ready(function() {
 	
 	//var specialty = window.location.hash.substring(1);
-	var parameters = getURLParameters();
+    var parameters = getURLParameters();
+    var latitude = parameters.latitude;
+    var longtitude = parameters.longtitude;
 	var specialty = parameters.injury.replace("%20", " ");
 	const hospitals = firebase.database().ref().child("Hospitals");
 
@@ -42,7 +44,7 @@ $(document).ready(function() {
 				hospital_name.style.textDecoration = "underline";
 				
 				hospital_name.onclick = function() {
-					window.location = "hospitalPage.html"+"?hospital-key="+childNodes.key+"?hospital-latitude="+hospital_latitude+"?hospital-longtitude="+hospital_longtitude;
+					window.location = "hospitalPage.html"+"?key="+childNodes.key+"?latitude="+latitude+"?longitude="+longtitude;
 				}
 				hospital_name.innerHTML = node.Name;
 				hospital_name.style.cursor = "pointer";
@@ -55,7 +57,7 @@ $(document).ready(function() {
 				image.style.padding = "5px";
 				image.style.cursor = "pointer";
 				image.onclick = function() {
-					window.location = "hospitalPage.html"+"?hospital-key="+childNodes.key+"?hospital-latitude="+hospital_latitude+"?hospital-longtitude="+hospital_longtitude;
+					window.location = "hospitalPage.html"+"?key="+childNodes.key+"?latitude="+hospital_latitude+"?longitude="+hospital_longtitude;
 				}
 				
 				left_div.appendChild(image);

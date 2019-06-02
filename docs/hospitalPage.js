@@ -77,9 +77,8 @@ $(document).ready(function () {
         var lat = parseFloat(latlong[0])
         var long = parseFloat(latlong[1])
         var d = distance(lat, long, glat, glong)
-        console.log(lat)
-        console.log(glat)
-        document.getElementById("distance").innerHTML = d +" km"
+        var d1 = Math.round(d * 10) / 10;
+        document.getElementById("distance").innerHTML = d1 +" km"
 
     })
     hs.once('value', function (snapshot) {
