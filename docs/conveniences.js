@@ -64,7 +64,7 @@ function initMap() {
     console.table(latlng);
     var myLatLng = new google.maps.LatLng({lat: lat, lng: lng});
     var mapOptions = {
-		zoom: 17,
+		zoom: 16,
 		center: myLatLng,
 		mapTypeId: 'roadmap',
     };
@@ -86,7 +86,7 @@ function restaurantMap() {
 	//36.362588,127.417769
 	console.log("myLatLng: " + myLatLng);
 	var mapOptions = {
-		zoom: 17,
+		zoom: 16,
 		center: myLatLng,
 		mapTypeId: 'roadmap',
     };
@@ -160,7 +160,7 @@ function transMap() {
 	//36.362588,127.417769
 	console.log("myLatLng: " + myLatLng);
 	var mapOptions = {
-		zoom: 17,
+		zoom: 16,
 		center: myLatLng,
 		mapTypeId: 'roadmap',
     };
