@@ -14,7 +14,11 @@ $(document).ready(function() {
 	}
 
 	$("input[name='sort_category']").change(function() {
-		window.location.href = "searchPage.html" + "?injury=" + parameters.injury +"&latitude="+parameters.latitude+"&longtitude="+parameters.longtitude+ "&sortby=" + this.value;
+		var refreshURL = "searchPage.html" + "?injury=" + parameters.injury;
+		if (parameters.latitude && parameters.longtitude) {
+			refreshURL += "&latitude=" + parameters.latitude + "&longtitude=" + parameters.longtitude
+		}
+		window.location.href = refreshURL + "&sortby=" + this.value;
 	});
 
 	var result_list = document.getElementById("results");
@@ -114,12 +118,13 @@ $(document).ready(function() {
 				var b = document.createElement("b");
 				b.innerHTML = "Distance: ";
 				dis.appendChild(b);
-				var latitude = parameters.latitude;
-				var longtitude = parameters.longtitude;
+				var latitude = parameters.latitude ? parameters.latitude : 36.36; // Default latitude if there is no parameter
+				var longtitude = parameters.longtitude ? parameters.longtitude : 127.36; // Default longtitude if there is no parameter
 				var d = distance(latitude, longtitude, hospital_latitude, hospital_longtitude);
 				d1 = Math.round(d*10)/10;
 				dis.innerHTML = dis.innerHTML+ d1+" km";
-				childNodes.ref.child("Distance").set(d1);
+				console.log(d1);
+				//childNodes.ref.child("Distance").set(d1);
 				right_div.appendChild(dis);
 
 

@@ -8,6 +8,7 @@ var injuries = [
 
 // Get User's permission to access user's location
 if ("geolocation" in navigator) {
+  console.log("Accessing user location...");
   navigator.geolocation.getCurrentPosition(function (position) {
     save_location(position.coords.latitude, position.coords.longitude);
   });
@@ -48,5 +49,6 @@ function submit_injury(input) {
 function save_location(x, y) {
   latitude = x;
   longtitude = y;
+  console.log(latitude, longtitude);
   $("#location").text("Your Location: " + latitude + ", " + longtitude);
 }
