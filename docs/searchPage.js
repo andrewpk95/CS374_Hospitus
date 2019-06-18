@@ -25,7 +25,15 @@ $(document).ready(function() {
 
 	var sort_value = document.querySelector('input[name="sort_category"]:checked').value;
 
-	hospitals.orderByChild("Rating/"+sort_value).once("value", function(snapshot){
+	var order_child;
+
+	if (sort_value == "Distance") {
+		order_child = "Distance";
+	} else {
+		order_child = "Rating/"+sort_value;
+	}
+
+	hospitals.orderByChild(order_child).once("value", function(snapshot){
 		snapshot.forEach(function(childNodes) {
 			if ((childNodes.val().Specialty == specialty) || (specialty == "All Injury")){
 
@@ -124,7 +132,7 @@ $(document).ready(function() {
 				d1 = Math.round(d*10)/10;
 				dis.innerHTML = dis.innerHTML+ d1+" km";
 				console.log(d1);
-				//childNodes.ref.child("Distance").set(d1);
+				childNodes.ref.child("Distance").set(d1);
 				right_div.appendChild(dis);
 
 
@@ -135,7 +143,11 @@ $(document).ready(function() {
 
 				result.appendChild(left_div);
 				result.appendChild(right_div);
-				result_list.insertBefore(result,result_list.childNodes[0]);
+				if (order_child != "Distance") {
+					result_list.insertBefore(result,result_list.childNodes[0]);
+				} else {
+					result_list.appendChild(result);
+				}
 
 			}
 
